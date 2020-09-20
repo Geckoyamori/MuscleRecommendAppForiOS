@@ -1,0 +1,599 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6BBCECD02517503C008FE75E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBCECCF2517503C008FE75E /* AppDelegate.swift */; };
+		6BBCECD22517503C008FE75E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBCECD12517503C008FE75E /* SceneDelegate.swift */; };
+		6BBCECD42517503C008FE75E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBCECD32517503C008FE75E /* ContentView.swift */; };
+		6BBCECD62517503D008FE75E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BBCECD52517503D008FE75E /* Assets.xcassets */; };
+		6BBCECD92517503D008FE75E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BBCECD82517503D008FE75E /* Preview Assets.xcassets */; };
+		6BBCECDC2517503D008FE75E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BBCECDA2517503D008FE75E /* LaunchScreen.storyboard */; };
+		6BBCECE72517503D008FE75E /* MuscleRecommendAppForiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBCECE62517503D008FE75E /* MuscleRecommendAppForiOSTests.swift */; };
+		6BBCECF22517503D008FE75E /* MuscleRecommendAppForiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBCECF12517503D008FE75E /* MuscleRecommendAppForiOSUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6BBCECE32517503D008FE75E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6BBCECC42517503C008FE75E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6BBCECCB2517503C008FE75E;
+			remoteInfo = MuscleRecommendAppForiOS;
+		};
+		6BBCECEE2517503D008FE75E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6BBCECC42517503C008FE75E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6BBCECCB2517503C008FE75E;
+			remoteInfo = MuscleRecommendAppForiOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6BBCECCC2517503C008FE75E /* MuscleRecommendAppForiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuscleRecommendAppForiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BBCECCF2517503C008FE75E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6BBCECD12517503C008FE75E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		6BBCECD32517503C008FE75E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6BBCECD52517503D008FE75E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6BBCECD82517503D008FE75E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6BBCECDB2517503D008FE75E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6BBCECDD2517503D008FE75E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BBCECE22517503D008FE75E /* MuscleRecommendAppForiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MuscleRecommendAppForiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BBCECE62517503D008FE75E /* MuscleRecommendAppForiOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleRecommendAppForiOSTests.swift; sourceTree = "<group>"; };
+		6BBCECE82517503D008FE75E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BBCECED2517503D008FE75E /* MuscleRecommendAppForiOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MuscleRecommendAppForiOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BBCECF12517503D008FE75E /* MuscleRecommendAppForiOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleRecommendAppForiOSUITests.swift; sourceTree = "<group>"; };
+		6BBCECF32517503D008FE75E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6BBCECC92517503C008FE75E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BBCECDF2517503D008FE75E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BBCECEA2517503D008FE75E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6BBCECC32517503C008FE75E = {
+			isa = PBXGroup;
+			children = (
+				6BBCECCE2517503C008FE75E /* MuscleRecommendAppForiOS */,
+				6BBCECE52517503D008FE75E /* MuscleRecommendAppForiOSTests */,
+				6BBCECF02517503D008FE75E /* MuscleRecommendAppForiOSUITests */,
+				6BBCECCD2517503C008FE75E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6BBCECCD2517503C008FE75E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6BBCECCC2517503C008FE75E /* MuscleRecommendAppForiOS.app */,
+				6BBCECE22517503D008FE75E /* MuscleRecommendAppForiOSTests.xctest */,
+				6BBCECED2517503D008FE75E /* MuscleRecommendAppForiOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6BBCECCE2517503C008FE75E /* MuscleRecommendAppForiOS */ = {
+			isa = PBXGroup;
+			children = (
+				6BBCECCF2517503C008FE75E /* AppDelegate.swift */,
+				6BBCECD12517503C008FE75E /* SceneDelegate.swift */,
+				6BBCECD32517503C008FE75E /* ContentView.swift */,
+				6BBCECD52517503D008FE75E /* Assets.xcassets */,
+				6BBCECDA2517503D008FE75E /* LaunchScreen.storyboard */,
+				6BBCECDD2517503D008FE75E /* Info.plist */,
+				6BBCECD72517503D008FE75E /* Preview Content */,
+			);
+			path = MuscleRecommendAppForiOS;
+			sourceTree = "<group>";
+		};
+		6BBCECD72517503D008FE75E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				6BBCECD82517503D008FE75E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6BBCECE52517503D008FE75E /* MuscleRecommendAppForiOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				6BBCECE62517503D008FE75E /* MuscleRecommendAppForiOSTests.swift */,
+				6BBCECE82517503D008FE75E /* Info.plist */,
+			);
+			path = MuscleRecommendAppForiOSTests;
+			sourceTree = "<group>";
+		};
+		6BBCECF02517503D008FE75E /* MuscleRecommendAppForiOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6BBCECF12517503D008FE75E /* MuscleRecommendAppForiOSUITests.swift */,
+				6BBCECF32517503D008FE75E /* Info.plist */,
+			);
+			path = MuscleRecommendAppForiOSUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6BBCECCB2517503C008FE75E /* MuscleRecommendAppForiOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6BBCECF62517503D008FE75E /* Build configuration list for PBXNativeTarget "MuscleRecommendAppForiOS" */;
+			buildPhases = (
+				6BBCECC82517503C008FE75E /* Sources */,
+				6BBCECC92517503C008FE75E /* Frameworks */,
+				6BBCECCA2517503C008FE75E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MuscleRecommendAppForiOS;
+			productName = MuscleRecommendAppForiOS;
+			productReference = 6BBCECCC2517503C008FE75E /* MuscleRecommendAppForiOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6BBCECE12517503D008FE75E /* MuscleRecommendAppForiOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6BBCECF92517503D008FE75E /* Build configuration list for PBXNativeTarget "MuscleRecommendAppForiOSTests" */;
+			buildPhases = (
+				6BBCECDE2517503D008FE75E /* Sources */,
+				6BBCECDF2517503D008FE75E /* Frameworks */,
+				6BBCECE02517503D008FE75E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6BBCECE42517503D008FE75E /* PBXTargetDependency */,
+			);
+			name = MuscleRecommendAppForiOSTests;
+			productName = MuscleRecommendAppForiOSTests;
+			productReference = 6BBCECE22517503D008FE75E /* MuscleRecommendAppForiOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6BBCECEC2517503D008FE75E /* MuscleRecommendAppForiOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6BBCECFC2517503D008FE75E /* Build configuration list for PBXNativeTarget "MuscleRecommendAppForiOSUITests" */;
+			buildPhases = (
+				6BBCECE92517503D008FE75E /* Sources */,
+				6BBCECEA2517503D008FE75E /* Frameworks */,
+				6BBCECEB2517503D008FE75E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6BBCECEF2517503D008FE75E /* PBXTargetDependency */,
+			);
+			name = MuscleRecommendAppForiOSUITests;
+			productName = MuscleRecommendAppForiOSUITests;
+			productReference = 6BBCECED2517503D008FE75E /* MuscleRecommendAppForiOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6BBCECC42517503C008FE75E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = "多喜和弘";
+				TargetAttributes = {
+					6BBCECCB2517503C008FE75E = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					6BBCECE12517503D008FE75E = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 6BBCECCB2517503C008FE75E;
+					};
+					6BBCECEC2517503D008FE75E = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 6BBCECCB2517503C008FE75E;
+					};
+				};
+			};
+			buildConfigurationList = 6BBCECC72517503C008FE75E /* Build configuration list for PBXProject "MuscleRecommendAppForiOS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6BBCECC32517503C008FE75E;
+			productRefGroup = 6BBCECCD2517503C008FE75E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6BBCECCB2517503C008FE75E /* MuscleRecommendAppForiOS */,
+				6BBCECE12517503D008FE75E /* MuscleRecommendAppForiOSTests */,
+				6BBCECEC2517503D008FE75E /* MuscleRecommendAppForiOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6BBCECCA2517503C008FE75E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BBCECDC2517503D008FE75E /* LaunchScreen.storyboard in Resources */,
+				6BBCECD92517503D008FE75E /* Preview Assets.xcassets in Resources */,
+				6BBCECD62517503D008FE75E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BBCECE02517503D008FE75E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BBCECEB2517503D008FE75E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6BBCECC82517503C008FE75E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BBCECD02517503C008FE75E /* AppDelegate.swift in Sources */,
+				6BBCECD22517503C008FE75E /* SceneDelegate.swift in Sources */,
+				6BBCECD42517503C008FE75E /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BBCECDE2517503D008FE75E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BBCECE72517503D008FE75E /* MuscleRecommendAppForiOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BBCECE92517503D008FE75E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BBCECF22517503D008FE75E /* MuscleRecommendAppForiOSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6BBCECE42517503D008FE75E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6BBCECCB2517503C008FE75E /* MuscleRecommendAppForiOS */;
+			targetProxy = 6BBCECE32517503D008FE75E /* PBXContainerItemProxy */;
+		};
+		6BBCECEF2517503D008FE75E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6BBCECCB2517503C008FE75E /* MuscleRecommendAppForiOS */;
+			targetProxy = 6BBCECEE2517503D008FE75E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6BBCECDA2517503D008FE75E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6BBCECDB2517503D008FE75E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6BBCECF42517503D008FE75E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6BBCECF52517503D008FE75E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6BBCECF72517503D008FE75E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"MuscleRecommendAppForiOS/Preview Content\"";
+				DEVELOPMENT_TEAM = L6CD882LCX;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = MuscleRecommendAppForiOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = geckoyamori.MuscleRecommendAppForiOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6BBCECF82517503D008FE75E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"MuscleRecommendAppForiOS/Preview Content\"";
+				DEVELOPMENT_TEAM = L6CD882LCX;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = MuscleRecommendAppForiOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = geckoyamori.MuscleRecommendAppForiOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6BBCECFA2517503D008FE75E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L6CD882LCX;
+				INFOPLIST_FILE = MuscleRecommendAppForiOSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = geckoyamori.MuscleRecommendAppForiOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MuscleRecommendAppForiOS.app/MuscleRecommendAppForiOS";
+			};
+			name = Debug;
+		};
+		6BBCECFB2517503D008FE75E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L6CD882LCX;
+				INFOPLIST_FILE = MuscleRecommendAppForiOSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = geckoyamori.MuscleRecommendAppForiOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MuscleRecommendAppForiOS.app/MuscleRecommendAppForiOS";
+			};
+			name = Release;
+		};
+		6BBCECFD2517503D008FE75E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L6CD882LCX;
+				INFOPLIST_FILE = MuscleRecommendAppForiOSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = geckoyamori.MuscleRecommendAppForiOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MuscleRecommendAppForiOS;
+			};
+			name = Debug;
+		};
+		6BBCECFE2517503D008FE75E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L6CD882LCX;
+				INFOPLIST_FILE = MuscleRecommendAppForiOSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = geckoyamori.MuscleRecommendAppForiOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MuscleRecommendAppForiOS;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6BBCECC72517503C008FE75E /* Build configuration list for PBXProject "MuscleRecommendAppForiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BBCECF42517503D008FE75E /* Debug */,
+				6BBCECF52517503D008FE75E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6BBCECF62517503D008FE75E /* Build configuration list for PBXNativeTarget "MuscleRecommendAppForiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BBCECF72517503D008FE75E /* Debug */,
+				6BBCECF82517503D008FE75E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6BBCECF92517503D008FE75E /* Build configuration list for PBXNativeTarget "MuscleRecommendAppForiOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BBCECFA2517503D008FE75E /* Debug */,
+				6BBCECFB2517503D008FE75E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6BBCECFC2517503D008FE75E /* Build configuration list for PBXNativeTarget "MuscleRecommendAppForiOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BBCECFD2517503D008FE75E /* Debug */,
+				6BBCECFE2517503D008FE75E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6BBCECC42517503C008FE75E /* Project object */;
+}
