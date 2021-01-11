@@ -15,6 +15,8 @@
 		6BEC8BAE25AB1F7E00A5C413 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BEC8BAC25AB1F7E00A5C413 /* LaunchScreen.storyboard */; };
 		6BEC8BB925AB1F7E00A5C413 /* MuscleRecommendTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEC8BB825AB1F7E00A5C413 /* MuscleRecommendTests.swift */; };
 		6BEC8BC425AB1F7E00A5C413 /* MuscleRecommendUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEC8BC325AB1F7E00A5C413 /* MuscleRecommendUITests.swift */; };
+		6BEC8BDD25AC555C00A5C413 /* ChatList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BEC8BDC25AC555C00A5C413 /* ChatList.storyboard */; };
+		6BEC8BE225AC58ED00A5C413 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEC8BE125AC58ED00A5C413 /* ChatListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		6BEC8BBF25AB1F7E00A5C413 /* MuscleRecommendUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MuscleRecommendUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BEC8BC325AB1F7E00A5C413 /* MuscleRecommendUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleRecommendUITests.swift; sourceTree = "<group>"; };
 		6BEC8BC525AB1F7E00A5C413 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BEC8BDC25AC555C00A5C413 /* ChatList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChatList.storyboard; sourceTree = "<group>"; };
+		6BEC8BE125AC58ED00A5C413 /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				6BEC8BAA25AB1F7E00A5C413 /* Assets.xcassets */,
 				6BEC8BAC25AB1F7E00A5C413 /* LaunchScreen.storyboard */,
 				6BEC8BAF25AB1F7E00A5C413 /* Info.plist */,
+				6BEC8BE125AC58ED00A5C413 /* ChatListViewController.swift */,
+				6BEC8BDC25AC555C00A5C413 /* ChatList.storyboard */,
 			);
 			path = MuscleRecommend;
 			sourceTree = "<group>";
@@ -233,6 +239,7 @@
 			files = (
 				6BEC8BAE25AB1F7E00A5C413 /* LaunchScreen.storyboard in Resources */,
 				6BEC8BAB25AB1F7E00A5C413 /* Assets.xcassets in Resources */,
+				6BEC8BDD25AC555C00A5C413 /* ChatList.storyboard in Resources */,
 				6BEC8BA925AB1F7D00A5C413 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,6 +267,7 @@
 			files = (
 				6BEC8BA625AB1F7D00A5C413 /* ViewController.swift in Sources */,
 				6BEC8BA225AB1F7D00A5C413 /* AppDelegate.swift in Sources */,
+				6BEC8BE225AC58ED00A5C413 /* ChatListViewController.swift in Sources */,
 				6BEC8BA425AB1F7D00A5C413 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
