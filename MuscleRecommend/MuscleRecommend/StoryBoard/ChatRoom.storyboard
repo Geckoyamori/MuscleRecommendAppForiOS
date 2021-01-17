@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="ZyY-O3-Atv">
+            <objects>
+                <navigationController id="aez-WC-EBJ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sKn-d1-aar">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="EUH-xY-ogg" kind="relationship" relationship="rootViewController" id="R32-mv-fnS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eaB-dV-Qkt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1109" y="40"/>
+        </scene>
+        <!--Chat Room View Controller-->
+        <scene sceneID="UEy-3E-Pun">
+            <objects>
+                <viewController storyboardIdentifier="ChatRoomViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="EUH-xY-ogg" customClass="ChatRoomViewController" customModule="MuscleRecommend" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="97P-dN-BfK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0Yw-55-iEJ">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gH3-by-qyo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gH3-by-qyo" firstAttribute="bottom" secondItem="0Yw-55-iEJ" secondAttribute="bottom" id="a4r-a9-T2Z"/>
+                            <constraint firstItem="0Yw-55-iEJ" firstAttribute="top" secondItem="gH3-by-qyo" secondAttribute="top" id="f7X-bF-A0h"/>
+                            <constraint firstItem="gH3-by-qyo" firstAttribute="trailing" secondItem="0Yw-55-iEJ" secondAttribute="trailing" id="h5X-E5-dc4"/>
+                            <constraint firstItem="0Yw-55-iEJ" firstAttribute="leading" secondItem="gH3-by-qyo" secondAttribute="leading" id="z3X-Bk-OkJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="t6L-2c-QIj"/>
+                    <connections>
+                        <outlet property="chatRoomTableView" destination="0Yw-55-iEJ" id="X8P-3p-iTP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4X9-wo-S11" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-249" y="40"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
