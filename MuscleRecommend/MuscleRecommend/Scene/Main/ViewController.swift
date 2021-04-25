@@ -101,6 +101,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }    
     // テーブルビューのセル選択時の画面遷移
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         selectedMuscleMenu = muscleMenuList[indexPath.row]
         performSegue(withIdentifier: "toMuscleRecordHistoryViewController", sender: nil)
     }
