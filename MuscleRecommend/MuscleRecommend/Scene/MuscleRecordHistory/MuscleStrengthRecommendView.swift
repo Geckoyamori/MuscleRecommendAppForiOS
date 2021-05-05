@@ -9,6 +9,8 @@ import UIKit
 
 class MuscleStrengthRecommendView: UIView {
     
+    // stackView
+    @IBOutlet weak var stackView: UIStackView!
     // 推奨ラベル
     @IBOutlet weak var recommendLabel: UILabel!
     // 強度ラベル
@@ -30,5 +32,9 @@ class MuscleStrengthRecommendView: UIView {
         let view = Bundle.main.loadNibNamed("MuscleStrengthRecommendView", owner: self, options: nil)?.first as! UIView
         view.frame = self.bounds
         self.addSubview(view)
+        
+        // viewの枠を角丸に設定
+        view.layer.cornerRadius = 10
+        view.layer.masksToBounds = true
     }
 }

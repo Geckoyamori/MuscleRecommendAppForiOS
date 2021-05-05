@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="recommendLabel" destination="RDs-pU-0Ux" id="oo2-3f-5ss"/>
                 <outlet property="setAndRepLabel" destination="2bW-TU-b6R" id="jna-Zs-uYe"/>
+                <outlet property="stackView" destination="fZn-w9-oi4" id="NIL-XO-v5N"/>
                 <outlet property="strengthLabel" destination="4RP-Z3-1oB" id="IiM-2C-kF7"/>
             </connections>
         </placeholder>

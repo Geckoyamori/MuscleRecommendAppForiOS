@@ -8,17 +8,18 @@
 import UIKit
 import RealmSwift
 
+// 筋トレメニューのDB
 class MuscleMenuData: Object {
     // 筋トレメニューid
-    dynamic var trainingMenuId: String = NSUUID().uuidString
+    @objc dynamic var trainingMenuId: String = NSUUID().uuidString
     // 筋トレメニュー名
-    dynamic var trainingMenuName: String = ""
+    @objc dynamic var trainingMenuName: String = ""
     // 筋トレ部位
-    dynamic var trainingPart: String = ""
+    @objc dynamic var trainingPart: String = ""
     // 作成日時
-    dynamic var createdDate: Date = Date()
+    @objc dynamic var createdDate: Date = Date().toJapaneseDeviceDate()
     // 更新日時
-    dynamic var uodatedDate: Date = Date()
+    @objc dynamic var uodatedDate: Date = Date().toJapaneseDeviceDate()
     
     // 筋トレメニューidをプライマリーキーに設定
     override class func primaryKey() -> String? {
