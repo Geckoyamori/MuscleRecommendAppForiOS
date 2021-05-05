@@ -3,12 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		6B3DB688262C6CBD0045341E /* MuscleRecordHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3DB687262C6CBD0045341E /* MuscleRecordHistoryViewController.swift */; };
 		6B3DB690262C6CC80045341E /* MuscleRecordHistory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B3DB68F262C6CC80045341E /* MuscleRecordHistory.storyboard */; };
+		6B68B6D22635B01B000D7ACC /* MuscleMenuData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B68B6D12635B01B000D7ACC /* MuscleMenuData.swift */; };
+		6B68B6E2264272DE000D7ACC /* MuscleStrengthRecommendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B68B6E1264272DE000D7ACC /* MuscleStrengthRecommendView.swift */; };
+		6B68B6E726427304000D7ACC /* MuscleStrengthRecommendView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B68B6E626427304000D7ACC /* MuscleStrengthRecommendView.xib */; };
 		6BEC8BA225AB1F7D00A5C413 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEC8BA125AB1F7D00A5C413 /* AppDelegate.swift */; };
 		6BEC8BA425AB1F7D00A5C413 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEC8BA325AB1F7D00A5C413 /* SceneDelegate.swift */; };
 		6BEC8BA625AB1F7D00A5C413 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEC8BA525AB1F7D00A5C413 /* ViewController.swift */; };
@@ -46,6 +49,9 @@
 		5A34EC7BCA62911B142E95DC /* Pods-MuscleRecommend-MuscleRecommendUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuscleRecommend-MuscleRecommendUITests.release.xcconfig"; path = "Target Support Files/Pods-MuscleRecommend-MuscleRecommendUITests/Pods-MuscleRecommend-MuscleRecommendUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6B3DB687262C6CBD0045341E /* MuscleRecordHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleRecordHistoryViewController.swift; sourceTree = "<group>"; };
 		6B3DB68F262C6CC80045341E /* MuscleRecordHistory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MuscleRecordHistory.storyboard; sourceTree = "<group>"; };
+		6B68B6D12635B01B000D7ACC /* MuscleMenuData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleMenuData.swift; sourceTree = "<group>"; };
+		6B68B6E1264272DE000D7ACC /* MuscleStrengthRecommendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleStrengthRecommendView.swift; sourceTree = "<group>"; };
+		6B68B6E626427304000D7ACC /* MuscleStrengthRecommendView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MuscleStrengthRecommendView.xib; sourceTree = "<group>"; };
 		6BEC8B9E25AB1F7D00A5C413 /* MuscleRecommend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuscleRecommend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BEC8BA125AB1F7D00A5C413 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6BEC8BA325AB1F7D00A5C413 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,7 +121,6 @@
 				3324D553A12E8ED746DD7427 /* Pods-MuscleRecommendTests.debug.xcconfig */,
 				4946AE49AE1301AA186A5750 /* Pods-MuscleRecommendTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -124,8 +129,18 @@
 			children = (
 				6B3DB687262C6CBD0045341E /* MuscleRecordHistoryViewController.swift */,
 				6B3DB68F262C6CC80045341E /* MuscleRecordHistory.storyboard */,
+				6B68B6E1264272DE000D7ACC /* MuscleStrengthRecommendView.swift */,
+				6B68B6E626427304000D7ACC /* MuscleStrengthRecommendView.xib */,
 			);
 			path = MuscleRecordHistory;
+			sourceTree = "<group>";
+		};
+		6B68B6D02635AFE3000D7ACC /* DataDefinition */ = {
+			isa = PBXGroup;
+			children = (
+				6B68B6D12635B01B000D7ACC /* MuscleMenuData.swift */,
+			);
+			path = DataDefinition;
 			sourceTree = "<group>";
 		};
 		6BC067DB2622C162005A1829 /* Scene */ = {
@@ -171,6 +186,7 @@
 		6BEC8BA025AB1F7D00A5C413 /* MuscleRecommend */ = {
 			isa = PBXGroup;
 			children = (
+				6B68B6D02635AFE3000D7ACC /* DataDefinition */,
 				6BC067DB2622C162005A1829 /* Scene */,
 				6BEC8BA125AB1F7D00A5C413 /* AppDelegate.swift */,
 				6BEC8BA325AB1F7D00A5C413 /* SceneDelegate.swift */,
@@ -308,6 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BEC8BAE25AB1F7E00A5C413 /* LaunchScreen.storyboard in Resources */,
+				6B68B6E726427304000D7ACC /* MuscleStrengthRecommendView.xib in Resources */,
 				6BEC8BAB25AB1F7E00A5C413 /* Assets.xcassets in Resources */,
 				6BEC8BA925AB1F7D00A5C413 /* Main.storyboard in Resources */,
 				6B3DB690262C6CC80045341E /* MuscleRecordHistory.storyboard in Resources */,
@@ -439,8 +456,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BEC8BA625AB1F7D00A5C413 /* ViewController.swift in Sources */,
+				6B68B6D22635B01B000D7ACC /* MuscleMenuData.swift in Sources */,
 				6BEC8BA225AB1F7D00A5C413 /* AppDelegate.swift in Sources */,
 				6B3DB688262C6CBD0045341E /* MuscleRecordHistoryViewController.swift in Sources */,
+				6B68B6E2264272DE000D7ACC /* MuscleStrengthRecommendView.swift in Sources */,
 				6BEC8BA425AB1F7D00A5C413 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
