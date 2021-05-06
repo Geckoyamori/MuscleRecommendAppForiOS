@@ -8,6 +8,7 @@
 import UIKit
 import RealmSwift
 
+// D-001
 class MuscleMenuViewController: UIViewController {
     // Realm
     let realm = try! Realm()
@@ -17,6 +18,8 @@ class MuscleMenuViewController: UIViewController {
     var muscleMenuList: Results<MuscleMenuData>!
     // 選択された筋トレメニュー
     var selectedMuscleMenu: String?
+    // 選択された筋トレメニューid
+    var selectedTrainingMenuId: String?
     // 筋トレメニューを表示するtableView
     @IBOutlet weak var muscleMenuTableView: UITableView!
     
@@ -41,7 +44,8 @@ class MuscleMenuViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "toMuscleRecordHistoryViewController") {
         let muscleRecordHistoryViewController: MuscleRecordHistoryViewController = segue.destination as! MuscleRecordHistoryViewController
-            muscleRecordHistoryViewController.navigationBarTitle = selectedMuscleMenu!
+            muscleRecordHistoryViewController.trainingMenuName = selectedMuscleMenu!
+            muscleRecordHistoryViewController.trainingMenuId = selectedTrainingMenuId!
         }
     }
     
@@ -106,6 +110,7 @@ extension MuscleMenuViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         selectedMuscleMenu = muscleMenuList[indexPath.row].trainingMenuName
+        selectedTrainingMenuId = muscleMenuList[indexPath.row].trainingMenuId
         performSegue(withIdentifier: "toMuscleRecordHistoryViewController", sender: nil)
     }
 }

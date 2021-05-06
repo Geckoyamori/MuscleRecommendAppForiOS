@@ -7,10 +7,15 @@
 
 import UIKit
 
+// D-002
 class MuscleRecordHistoryViewController: UIViewController {
-    // navigationbarのタイトル
-    var navigationBarTitle = ""
-    // 推奨セット・レップ数のView
+    // D-001からのパラメータ
+    // 筋トレメニュー
+    var trainingMenuName: String?
+    // 筋トレメニューid
+    var trainingMenuId: String?
+
+    // 総負荷量View
     @IBOutlet weak var highStrengthReccomendView: MuscleStrengthRecommendView!
     @IBOutlet weak var mediumStrengthReccomendView: MuscleStrengthRecommendView!
     @IBOutlet weak var lowStrengthReccomendView: MuscleStrengthRecommendView!
@@ -18,18 +23,23 @@ class MuscleRecordHistoryViewController: UIViewController {
     let highStrength = "高強度"
     let mediumStrength = "中強度"
     let lowStrength = "低強度"
+    let high = "High"
+    let medium = "Medium"
+    let low = "Low"
+    // 選択された筋トレ強度
+    var selectedTrainingStrength: String?
     
     
     override func viewDidLoad() {
         // navigationbarの設定
-        title = navigationBarTitle
-        // 推奨セット・レップ数のViewのデザイン設定
+        title = trainingMenuName
+        // 総負荷量Viewのデザイン設定
         setMuscleStrengthRecommendView()
-        // 推奨セット・レップ数の表示
+        // 総負荷量の表示
         showMuscleStrengthRecommend()
     }
     
-    // 推奨セット・レップ数のViewのデザイン設定
+    // 総負荷量Viewのデザイン設定
     func setMuscleStrengthRecommendView() {
         // 色の設定
         highStrengthReccomendView.stackView.backgroundColor = UIColor.init(hex: "ff0000", alpha: 0.3)
@@ -42,8 +52,32 @@ class MuscleRecordHistoryViewController: UIViewController {
         lowStrengthReccomendView.strengthLabel.text = lowStrength
     }
     
-    // 推奨セット・レップ数の表示
+    // 総負荷量の表示
     func showMuscleStrengthRecommend() {
         
+    }
+    
+    // segueの準備
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "toMuscleRecordViewController") {
+            let muscleRecordViewController: MuscleRecordViewController = segue.destination as! MuscleRecordViewController
+            muscleRecordViewController.trainingMenuName = trainingMenuName
+            muscleRecordViewController.trainingMenuId = trainingMenuId
+            muscleRecordViewController.trainingStrength = selectedTrainingStrength
+        }
+    }
+    
+    // 総負荷量Viewをタップ時の処理
+    @IBAction func tapHighStrengthReccomendView(_ sender: Any) {
+        selectedTrainingStrength = high
+        performSegue(withIdentifier: "toMuscleRecordViewController", sender: nil)
+    }
+    @IBAction func tapMediumStrengthReccomendView(_ sender: Any) {
+        selectedTrainingStrength = medium
+        performSegue(withIdentifier: "toMuscleRecordViewController", sender: nil)
+    }
+    @IBAction func tapLowStrengthReccomendView(_ sender: Any) {
+        selectedTrainingStrength = low
+        performSegue(withIdentifier: "toMuscleRecordViewController", sender: nil)
     }
 }

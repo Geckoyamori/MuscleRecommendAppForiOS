@@ -11,7 +11,7 @@
         <!--Muscle Record History View Controller-->
         <scene sceneID="bOa-bG-kNw">
             <objects>
-                <viewController storyboardIdentifier="MuscleRecordHistory" id="Nve-W7-Oub" customClass="MuscleRecordHistoryViewController" customModule="MuscleRecommend" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Nve-W7-Oub" customClass="MuscleRecordHistoryViewController" customModule="MuscleRecommend" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rp6-6H-X5p">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,14 +26,26 @@
                                     <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MM9-Te-Xaf" userLabel="High Muscle Strength Recommend View" customClass="MuscleStrengthRecommendView" customModule="MuscleRecommend" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="394" height="93.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="epr-7x-U8D" appends="YES" id="q5K-vQ-C6T"/>
+                                        </connections>
                                     </view>
                                     <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uvd-eK-s9j" userLabel="Medium Muscle Strength Recommend View" customClass="MuscleStrengthRecommendView" customModule="MuscleRecommend" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="103.5" width="394" height="93"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="tNq-bZ-ExJ" appends="YES" id="suG-fx-U0t"/>
+                                        </connections>
                                     </view>
                                     <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j7E-5D-nAG" userLabel="Low Muscle Strength Recommend View" customClass="MuscleStrengthRecommendView" customModule="MuscleRecommend" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="206.5" width="394" height="93.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="98y-06-POE" appends="YES" id="mMg-NE-hb1"/>
+                                        </connections>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -57,11 +69,37 @@
                         <outlet property="highStrengthReccomendView" destination="MM9-Te-Xaf" id="pCo-tN-gJ9"/>
                         <outlet property="lowStrengthReccomendView" destination="j7E-5D-nAG" id="tmF-2p-Kl0"/>
                         <outlet property="mediumStrengthReccomendView" destination="uvd-eK-s9j" id="vcN-3x-aei"/>
+                        <segue destination="3eV-Dl-IiU" kind="show" identifier="toMuscleRecordViewController" id="cWY-9i-fEF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SOR-mU-gXK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="epr-7x-U8D">
+                    <connections>
+                        <action selector="tapHighStrengthReccomendView:" destination="Nve-W7-Oub" id="ujL-lu-Ld4"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="tNq-bZ-ExJ">
+                    <connections>
+                        <action selector="tapMediumStrengthReccomendView:" destination="Nve-W7-Oub" id="W7X-fp-ui3"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="98y-06-POE">
+                    <connections>
+                        <action selector="tapLowStrengthReccomendView:" destination="Nve-W7-Oub" id="BH3-Wb-ejP"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="105.79710144927537" y="-10.044642857142856"/>
+        </scene>
+        <!--MuscleRecord-->
+        <scene sceneID="gdn-Pk-lSg">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MuscleRecord" id="3eV-Dl-IiU" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="OAa-DK-j2c"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IHP-QT-fYF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="812" y="-10"/>
         </scene>
     </scenes>
     <resources>
