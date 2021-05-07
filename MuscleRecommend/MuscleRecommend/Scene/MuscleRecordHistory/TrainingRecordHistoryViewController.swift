@@ -1,5 +1,5 @@
 //
-//  MuscleRecordHistoryViewController.swift
+//  TrainingRecordHistoryViewController.swift
 //  MuscleRecommend
 //
 //  Created by 多喜和弘 on 2021/04/18.
@@ -16,9 +16,9 @@ class TrainingRecordHistoryViewController: UIViewController {
     var trainingMenuId: String?
 
     // 総負荷量View
-    @IBOutlet weak var highStrengthReccomendView: MuscleStrengthRecommendView!
-    @IBOutlet weak var mediumStrengthReccomendView: MuscleStrengthRecommendView!
-    @IBOutlet weak var lowStrengthReccomendView: MuscleStrengthRecommendView!
+    @IBOutlet weak var highStrengthReccomendView: TrainingStrengthRecommendView!
+    @IBOutlet weak var mediumStrengthReccomendView: TrainingStrengthRecommendView!
+    @IBOutlet weak var lowStrengthReccomendView: TrainingStrengthRecommendView!
     // 強度の文字列
     let highStrength = "高強度"
     let mediumStrength = "中強度"
@@ -59,25 +59,25 @@ class TrainingRecordHistoryViewController: UIViewController {
     
     // segueの準備
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "toMuscleRecordViewController") {
-            let muscleRecordViewController: MuscleRecordViewController = segue.destination as! MuscleRecordViewController
-            muscleRecordViewController.trainingMenuName = trainingMenuName
-            muscleRecordViewController.trainingMenuId = trainingMenuId
-            muscleRecordViewController.trainingStrength = selectedTrainingStrength
+        if (segue.identifier == "toTrainingRecordViewController") {
+            let trainingRecordViewController: TrainingRecordViewController = segue.destination as! TrainingRecordViewController
+            trainingRecordViewController.trainingMenuName = trainingMenuName
+            trainingRecordViewController.trainingMenuId = trainingMenuId
+            trainingRecordViewController.trainingStrength = selectedTrainingStrength
         }
     }
     
     // 総負荷量Viewをタップ時の処理
     @IBAction func tapHighStrengthReccomendView(_ sender: Any) {
         selectedTrainingStrength = high
-        performSegue(withIdentifier: "toMuscleRecordViewController", sender: nil)
+        performSegue(withIdentifier: "toTrainingRecordViewController", sender: nil)
     }
     @IBAction func tapMediumStrengthReccomendView(_ sender: Any) {
         selectedTrainingStrength = medium
-        performSegue(withIdentifier: "toMuscleRecordViewController", sender: nil)
+        performSegue(withIdentifier: "toTrainingRecordViewController", sender: nil)
     }
     @IBAction func tapLowStrengthReccomendView(_ sender: Any) {
         selectedTrainingStrength = low
-        performSegue(withIdentifier: "toMuscleRecordViewController", sender: nil)
+        performSegue(withIdentifier: "toTrainingRecordViewController", sender: nil)
     }
 }

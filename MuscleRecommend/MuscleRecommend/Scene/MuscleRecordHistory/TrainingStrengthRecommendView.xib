@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MuscleStrengthRecommendView" customModule="MuscleRecommend" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TrainingStrengthRecommendView" customModule="MuscleRecommend" customModuleProvider="target">
             <connections>
                 <outlet property="recommendLabel" destination="RDs-pU-0Ux" id="oo2-3f-5ss"/>
                 <outlet property="setAndRepLabel" destination="2bW-TU-b6R" id="jna-Zs-uYe"/>

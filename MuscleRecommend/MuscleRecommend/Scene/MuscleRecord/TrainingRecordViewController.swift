@@ -1,5 +1,5 @@
 //
-//  MuscleRecordViewController.swift
+//  TrainingRecordViewController.swift
 //  MuscleRecommend
 //
 //  Created by 多喜和弘 on 2021/05/06.
@@ -8,7 +8,7 @@
 import UIKit
 
 // D-003
-class MuscleRecordViewController: UIViewController {
+class TrainingRecordViewController: UIViewController {
     
     // D-002からのパラメータ
     // 筋トレメニュー
@@ -32,7 +32,7 @@ class MuscleRecordViewController: UIViewController {
 }
 
 // tableViewのメソッド
-extension MuscleRecordViewController: UITableViewDelegate, UITableViewDataSource {
+extension TrainingRecordViewController: UITableViewDelegate, UITableViewDataSource {
     // tableViewの行数を設定
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5

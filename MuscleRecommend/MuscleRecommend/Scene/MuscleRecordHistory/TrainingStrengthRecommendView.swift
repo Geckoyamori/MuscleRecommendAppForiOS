@@ -1,5 +1,5 @@
 //
-//  MuscleStrengthRecommendView.swift
+//  TrainingStrengthRecommendView.swift
 //  MuscleRecommend
 //
 //  Created by 多喜和弘 on 2021/05/05.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MuscleStrengthRecommendView: UIView {
+class TrainingStrengthRecommendView: UIView {
     
     // stackView
     @IBOutlet weak var stackView: UIStackView!
@@ -29,7 +29,7 @@ class MuscleStrengthRecommendView: UIView {
     }
 
     func loadNib(){
-        let view = Bundle.main.loadNibNamed("MuscleStrengthRecommendView", owner: self, options: nil)?.first as! UIView
+        let view = Bundle.main.loadNibNamed("TrainingStrengthRecommendView", owner: self, options: nil)?.first as! UIView
         view.frame = self.bounds
         self.addSubview(view)
         

@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Muscle Menu View Controller-->
+        <!--Training Menu View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MuscleMenuViewController" customModule="MuscleRecommend" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="TrainingMenuViewController" customModule="MuscleRecommend" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -53,17 +53,17 @@
                     </navigationItem>
                     <connections>
                         <outlet property="muscleMenuTableView" destination="Zvl-ij-JTU" id="sxH-ou-HRT"/>
-                        <segue destination="eLm-ET-IDt" kind="show" identifier="toMuscleRecordHistoryViewController" id="rFJ-tE-YRe"/>
+                        <segue destination="eLm-ET-IDt" kind="show" identifier="toTrainingRecordHistoryViewController" id="rFJ-tE-YRe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="713.04347826086962" y="100.44642857142857"/>
         </scene>
-        <!--MuscleRecordHistory-->
+        <!--TrainingRecordHistory-->
         <scene sceneID="gJV-JH-4Zm">
             <objects>
-                <viewControllerPlaceholder storyboardName="MuscleRecordHistory" id="eLm-ET-IDt" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="TrainingRecordHistory" id="eLm-ET-IDt" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="1DG-wN-ZVD"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OaE-HX-EEu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

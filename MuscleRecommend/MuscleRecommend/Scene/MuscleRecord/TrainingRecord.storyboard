@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Muscle Record View Controller-->
+        <!--Training Record View Controller-->
         <scene sceneID="tPc-Wc-s5Q">
             <objects>
-                <viewController id="mBw-MV-Hv4" customClass="MuscleRecordViewController" customModule="MuscleRecommend" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="mBw-MV-Hv4" customClass="TrainingRecordViewController" customModule="MuscleRecommend" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0aQ-Ov-JD1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

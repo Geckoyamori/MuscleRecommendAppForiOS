@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  TrainingMenuViewController.swift
 //  MuscleRecommend
 //
 //  Created by 多喜和弘 on 2021/01/10.
@@ -9,15 +9,15 @@ import UIKit
 import RealmSwift
 
 // D-001
-class MuscleMenuViewController: UIViewController {
+class TrainingMenuViewController: UIViewController {
     // Realm
     let realm = try! Realm()
     // navigationbarのタイトル
     let navigationBarTitle = "筋トレメニュー"
     // 筋トレメニューのDBの一覧取得結果
-    var muscleMenuList: Results<MuscleMenuData>!
+    var trainingMenuList: Results<TrainingMenuData>!
     // 選択された筋トレメニュー
-    var selectedMuscleMenu: String?
+    var selectedTrainingMenu: String?
     // 選択された筋トレメニューid
     var selectedTrainingMenuId: String?
     // 筋トレメニューを表示するtableView
@@ -37,15 +37,15 @@ class MuscleMenuViewController: UIViewController {
         muscleMenuTableView.dataSource = self
 
         // 筋トレメニューを格納するリストの取得
-        muscleMenuList = realm.objects(MuscleMenuData.self)
+        trainingMenuList = realm.objects(TrainingMenuData.self)
     }
     
     // segueの準備
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "toMuscleRecordHistoryViewController") {
-        let muscleRecordHistoryViewController: MuscleRecordHistoryViewController = segue.destination as! MuscleRecordHistoryViewController
-            muscleRecordHistoryViewController.trainingMenuName = selectedMuscleMenu!
-            muscleRecordHistoryViewController.trainingMenuId = selectedTrainingMenuId!
+        if (segue.identifier == "toTrainingRecordHistoryViewController") {
+        let trainingRecordHistoryViewController: TrainingRecordHistoryViewController = segue.destination as! TrainingRecordHistoryViewController
+            trainingRecordHistoryViewController.trainingMenuName = selectedTrainingMenu!
+            trainingRecordHistoryViewController.trainingMenuId = selectedTrainingMenuId!
         }
     }
     
@@ -66,7 +66,7 @@ class MuscleMenuViewController: UIViewController {
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
         let okAction = UIAlertAction(title: "OK", style: .default) { [self] (_) in
             if let textField = alert.textFields?.first {
-                insertMuscleMenuData(trainingMenuName: textField.text!)
+                insertTrainingMenuData(trainingMenuName: textField.text!)
             }
             muscleMenuTableView.reloadData()
         }
@@ -88,49 +88,49 @@ class MuscleMenuViewController: UIViewController {
 }
 
 // tableViewのメソッド
-extension MuscleMenuViewController: UITableViewDelegate, UITableViewDataSource {
+extension TrainingMenuViewController: UITableViewDelegate, UITableViewDataSource {
     // tableViewの行数を設定
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return muscleMenuList.count
+        return trainingMenuList.count
     }
     // tableViewのセルを設定
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath)
-        cell.textLabel!.text = muscleMenuList[indexPath.row].trainingMenuName
+        cell.textLabel!.text = trainingMenuList[indexPath.row].trainingMenuName
         return cell
     }
     // テーブルビューのセルをスワイプで削除
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCell.EditingStyle.delete {
-            deleteMuscleMenuData(index: indexPath.row)
+            deleteTrainingMenuData(index: indexPath.row)
             muscleMenuTableView.deleteRows(at: [indexPath as IndexPath], with: UITableView.RowAnimation.automatic)
         }
     }    
     // テーブルビューのセル選択時の画面遷移
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        selectedMuscleMenu = muscleMenuList[indexPath.row].trainingMenuName
-        selectedTrainingMenuId = muscleMenuList[indexPath.row].trainingMenuId
-        performSegue(withIdentifier: "toMuscleRecordHistoryViewController", sender: nil)
+        selectedTrainingMenu = trainingMenuList[indexPath.row].trainingMenuName
+        selectedTrainingMenuId = trainingMenuList[indexPath.row].trainingMenuId
+        performSegue(withIdentifier: "toTrainingRecordHistoryViewController", sender: nil)
     }
 }
 
 // Realmのメソッド
-extension MuscleMenuViewController {
+extension TrainingMenuViewController {
     // 筋トレメニューのDBに追加
-    func insertMuscleMenuData(trainingMenuName: String) {
+    func insertTrainingMenuData(trainingMenuName: String) {
         // 追加する筋トレメニューの設定
-        let muscleMenuData = MuscleMenuData()
-        muscleMenuData.trainingMenuName = trainingMenuName
+        let trainingMenuData = TrainingMenuData()
+        trainingMenuData.trainingMenuName = trainingMenuName
         try! realm.write {
-            realm.add(MuscleMenuData(value: muscleMenuData))
+            realm.add(TrainingMenuData(value: trainingMenuData))
         }
     }
     
     // 筋トレメニューのDBから削除
-    func deleteMuscleMenuData(index: Int) {
+    func deleteTrainingMenuData(index: Int) {
         try! realm.write {
-            realm.delete(muscleMenuList[index])
+            realm.delete(trainingMenuList[index])
         }
     }
 }
