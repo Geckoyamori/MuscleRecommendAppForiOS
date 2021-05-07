@@ -16,6 +16,8 @@
 		6B68B7002642F4CE000D7ACC /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B68B6FF2642F4CE000D7ACC /* Date.swift */; };
 		6B68B70F26442E66000D7ACC /* TrainingRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B68B70E26442E66000D7ACC /* TrainingRecordViewController.swift */; };
 		6B68B71726442E7A000D7ACC /* TrainingRecord.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B68B71626442E7A000D7ACC /* TrainingRecord.storyboard */; };
+		6B68B73D264564C1000D7ACC /* TrainingRecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B68B73B264564C1000D7ACC /* TrainingRecordTableViewCell.swift */; };
+		6B68B73E264564C1000D7ACC /* TrainingRecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B68B73C264564C1000D7ACC /* TrainingRecordTableViewCell.xib */; };
 		6BEC8BA225AB1F7D00A5C413 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEC8BA125AB1F7D00A5C413 /* AppDelegate.swift */; };
 		6BEC8BA425AB1F7D00A5C413 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEC8BA325AB1F7D00A5C413 /* SceneDelegate.swift */; };
 		6BEC8BA625AB1F7D00A5C413 /* TrainingMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEC8BA525AB1F7D00A5C413 /* TrainingMenuViewController.swift */; };
@@ -60,6 +62,8 @@
 		6B68B6FF2642F4CE000D7ACC /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		6B68B70E26442E66000D7ACC /* TrainingRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingRecordViewController.swift; sourceTree = "<group>"; };
 		6B68B71626442E7A000D7ACC /* TrainingRecord.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TrainingRecord.storyboard; sourceTree = "<group>"; };
+		6B68B73B264564C1000D7ACC /* TrainingRecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingRecordTableViewCell.swift; sourceTree = "<group>"; };
+		6B68B73C264564C1000D7ACC /* TrainingRecordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainingRecordTableViewCell.xib; sourceTree = "<group>"; };
 		6BEC8B9E25AB1F7D00A5C413 /* MuscleRecommend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuscleRecommend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BEC8BA125AB1F7D00A5C413 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6BEC8BA325AB1F7D00A5C413 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -132,7 +136,7 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		6B3DB686262C6C860045341E /* MuscleRecordHistory */ = {
+		6B3DB686262C6C860045341E /* TrainingRecordHistory */ = {
 			isa = PBXGroup;
 			children = (
 				6B3DB687262C6CBD0045341E /* TrainingRecordHistoryViewController.swift */,
@@ -140,7 +144,7 @@
 				6B68B6E1264272DE000D7ACC /* TrainingStrengthRecommendView.swift */,
 				6B68B6E626427304000D7ACC /* TrainingStrengthRecommendView.xib */,
 			);
-			path = MuscleRecordHistory;
+			path = TrainingRecordHistory;
 			sourceTree = "<group>";
 		};
 		6B68B6D02635AFE3000D7ACC /* DataDefinition */ = {
@@ -160,20 +164,22 @@
 			path = Properties;
 			sourceTree = "<group>";
 		};
-		6B68B70D26442E35000D7ACC /* MuscleRecord */ = {
+		6B68B70D26442E35000D7ACC /* TrainingRecord */ = {
 			isa = PBXGroup;
 			children = (
 				6B68B70E26442E66000D7ACC /* TrainingRecordViewController.swift */,
 				6B68B71626442E7A000D7ACC /* TrainingRecord.storyboard */,
+				6B68B73B264564C1000D7ACC /* TrainingRecordTableViewCell.swift */,
+				6B68B73C264564C1000D7ACC /* TrainingRecordTableViewCell.xib */,
 			);
-			path = MuscleRecord;
+			path = TrainingRecord;
 			sourceTree = "<group>";
 		};
 		6BC067DB2622C162005A1829 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				6B68B70D26442E35000D7ACC /* MuscleRecord */,
-				6B3DB686262C6C860045341E /* MuscleRecordHistory */,
+				6B68B70D26442E35000D7ACC /* TrainingRecord */,
+				6B3DB686262C6C860045341E /* TrainingRecordHistory */,
 				6BC067DC2622C17A005A1829 /* Main */,
 			);
 			path = Scene;
@@ -351,6 +357,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B68B73E264564C1000D7ACC /* TrainingRecordTableViewCell.xib in Resources */,
 				6BEC8BAE25AB1F7E00A5C413 /* LaunchScreen.storyboard in Resources */,
 				6B68B6E726427304000D7ACC /* TrainingStrengthRecommendView.xib in Resources */,
 				6B68B71726442E7A000D7ACC /* TrainingRecord.storyboard in Resources */,
@@ -486,6 +493,7 @@
 			files = (
 				6BEC8BA625AB1F7D00A5C413 /* TrainingMenuViewController.swift in Sources */,
 				6B68B6F326429715000D7ACC /* UIColor.swift in Sources */,
+				6B68B73D264564C1000D7ACC /* TrainingRecordTableViewCell.swift in Sources */,
 				6B68B6D22635B01B000D7ACC /* TrainingMenuData.swift in Sources */,
 				6BEC8BA225AB1F7D00A5C413 /* AppDelegate.swift in Sources */,
 				6B3DB688262C6CBD0045341E /* TrainingRecordHistoryViewController.swift in Sources */,
