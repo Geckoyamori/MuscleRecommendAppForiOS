@@ -70,6 +70,7 @@
                         <outlet property="highStrengthReccomendView" destination="MM9-Te-Xaf" id="pCo-tN-gJ9"/>
                         <outlet property="lowStrengthReccomendView" destination="j7E-5D-nAG" id="tmF-2p-Kl0"/>
                         <outlet property="mediumStrengthReccomendView" destination="uvd-eK-s9j" id="vcN-3x-aei"/>
+                        <outlet property="trainingRecordTableView" destination="rF9-P3-TPD" id="2vi-rf-5f1"/>
                         <segue destination="3eV-Dl-IiU" kind="show" identifier="toTrainingRecordViewController" id="cWY-9i-fEF"/>
                     </connections>
                 </viewController>

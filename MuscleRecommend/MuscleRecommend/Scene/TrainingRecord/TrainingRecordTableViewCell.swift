@@ -19,7 +19,7 @@ class TrainingRecordTableViewCell: UITableViewCell, UITextFieldDelegate {
     // 重量入力テキストフィールド
     @IBOutlet weak var weightTextField: UITextField! {
         didSet {
-            weightTextField.keyboardType = .numberPad
+            weightTextField.keyboardType = .decimalPad
         }
     }
     // 回数入力テキストフィールド

@@ -14,14 +14,16 @@ class TrainingMenuViewController: UIViewController {
     let realm = try! Realm()
     // navigationbarのタイトル
     let navigationBarTitle = "筋トレメニュー"
+    // 筋トレメニューを表示するtableView
+    @IBOutlet weak var muscleMenuTableView: UITableView!
+    
+    // D-001のパラメータ
     // 筋トレメニューのDBの一覧取得結果
     var trainingMenuList: Results<TrainingMenuData>!
     // 選択された筋トレメニュー
     var selectedTrainingMenu: String?
     // 選択された筋トレメニューid
     var selectedTrainingMenuId: String?
-    // 筋トレメニューを表示するtableView
-    @IBOutlet weak var muscleMenuTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +39,7 @@ class TrainingMenuViewController: UIViewController {
         muscleMenuTableView.dataSource = self
 
         // 筋トレメニューを格納するリストの取得
-        trainingMenuList = realm.objects(TrainingMenuData.self)
+        selectTrainingMenuList()
     }
     
     // segueの準備
@@ -117,6 +119,11 @@ extension TrainingMenuViewController: UITableViewDelegate, UITableViewDataSource
 
 // Realmのメソッド
 extension TrainingMenuViewController {
+    // 筋トレメニューのDBから取得
+    func selectTrainingMenuList() {
+        trainingMenuList = realm.objects(TrainingMenuData.self)
+    }
+    
     // 筋トレメニューのDBに追加
     func insertTrainingMenuData(trainingMenuName: String) {
         // 追加する筋トレメニューの設定

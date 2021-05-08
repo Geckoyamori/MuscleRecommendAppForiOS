@@ -8,7 +8,7 @@
 import UIKit
 import RealmSwift
 
-// 筋トレメニューのDB
+// 筋トレメニューデータ
 class TrainingMenuData: Object {
     // 筋トレメニューid
     @objc dynamic var trainingMenuId: String = NSUUID().uuidString

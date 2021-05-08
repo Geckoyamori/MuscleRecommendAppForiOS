@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B1B205126466F8600885CFA /* TrainingRecordHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1B204F26466F8600885CFA /* TrainingRecordHistoryTableViewCell.swift */; };
+		6B1B205226466F8600885CFA /* TrainingRecordHistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B1B205026466F8600885CFA /* TrainingRecordHistoryTableViewCell.xib */; };
 		6B3DB688262C6CBD0045341E /* TrainingRecordHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3DB687262C6CBD0045341E /* TrainingRecordHistoryViewController.swift */; };
 		6B3DB690262C6CC80045341E /* TrainingRecordHistory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B3DB68F262C6CC80045341E /* TrainingRecordHistory.storyboard */; };
 		6B68B6D22635B01B000D7ACC /* TrainingMenuData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B68B6D12635B01B000D7ACC /* TrainingMenuData.swift */; };
@@ -18,6 +20,8 @@
 		6B68B71726442E7A000D7ACC /* TrainingRecord.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B68B71626442E7A000D7ACC /* TrainingRecord.storyboard */; };
 		6B68B73D264564C1000D7ACC /* TrainingRecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B68B73B264564C1000D7ACC /* TrainingRecordTableViewCell.swift */; };
 		6B68B73E264564C1000D7ACC /* TrainingRecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B68B73C264564C1000D7ACC /* TrainingRecordTableViewCell.xib */; };
+		6B68B749264619A3000D7ACC /* TrainingLoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B68B748264619A3000D7ACC /* TrainingLoadData.swift */; };
+		6B68B74E26462489000D7ACC /* TrainingRecordData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B68B74D26462489000D7ACC /* TrainingRecordData.swift */; };
 		6BEC8BA225AB1F7D00A5C413 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEC8BA125AB1F7D00A5C413 /* AppDelegate.swift */; };
 		6BEC8BA425AB1F7D00A5C413 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEC8BA325AB1F7D00A5C413 /* SceneDelegate.swift */; };
 		6BEC8BA625AB1F7D00A5C413 /* TrainingMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEC8BA525AB1F7D00A5C413 /* TrainingMenuViewController.swift */; };
@@ -53,6 +57,8 @@
 		4946AE49AE1301AA186A5750 /* Pods-MuscleRecommendTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuscleRecommendTests.release.xcconfig"; path = "Target Support Files/Pods-MuscleRecommendTests/Pods-MuscleRecommendTests.release.xcconfig"; sourceTree = "<group>"; };
 		572C7168F94E77896E4C2CA8 /* Pods_MuscleRecommendTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MuscleRecommendTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A34EC7BCA62911B142E95DC /* Pods-MuscleRecommend-MuscleRecommendUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuscleRecommend-MuscleRecommendUITests.release.xcconfig"; path = "Target Support Files/Pods-MuscleRecommend-MuscleRecommendUITests/Pods-MuscleRecommend-MuscleRecommendUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6B1B204F26466F8600885CFA /* TrainingRecordHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingRecordHistoryTableViewCell.swift; sourceTree = "<group>"; };
+		6B1B205026466F8600885CFA /* TrainingRecordHistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainingRecordHistoryTableViewCell.xib; sourceTree = "<group>"; };
 		6B3DB687262C6CBD0045341E /* TrainingRecordHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingRecordHistoryViewController.swift; sourceTree = "<group>"; };
 		6B3DB68F262C6CC80045341E /* TrainingRecordHistory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TrainingRecordHistory.storyboard; sourceTree = "<group>"; };
 		6B68B6D12635B01B000D7ACC /* TrainingMenuData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingMenuData.swift; sourceTree = "<group>"; };
@@ -64,6 +70,8 @@
 		6B68B71626442E7A000D7ACC /* TrainingRecord.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TrainingRecord.storyboard; sourceTree = "<group>"; };
 		6B68B73B264564C1000D7ACC /* TrainingRecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingRecordTableViewCell.swift; sourceTree = "<group>"; };
 		6B68B73C264564C1000D7ACC /* TrainingRecordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainingRecordTableViewCell.xib; sourceTree = "<group>"; };
+		6B68B748264619A3000D7ACC /* TrainingLoadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingLoadData.swift; sourceTree = "<group>"; };
+		6B68B74D26462489000D7ACC /* TrainingRecordData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingRecordData.swift; sourceTree = "<group>"; };
 		6BEC8B9E25AB1F7D00A5C413 /* MuscleRecommend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuscleRecommend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BEC8BA125AB1F7D00A5C413 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6BEC8BA325AB1F7D00A5C413 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +151,8 @@
 				6B3DB68F262C6CC80045341E /* TrainingRecordHistory.storyboard */,
 				6B68B6E1264272DE000D7ACC /* TrainingStrengthRecommendView.swift */,
 				6B68B6E626427304000D7ACC /* TrainingStrengthRecommendView.xib */,
+				6B1B204F26466F8600885CFA /* TrainingRecordHistoryTableViewCell.swift */,
+				6B1B205026466F8600885CFA /* TrainingRecordHistoryTableViewCell.xib */,
 			);
 			path = TrainingRecordHistory;
 			sourceTree = "<group>";
@@ -151,6 +161,8 @@
 			isa = PBXGroup;
 			children = (
 				6B68B6D12635B01B000D7ACC /* TrainingMenuData.swift */,
+				6B68B748264619A3000D7ACC /* TrainingLoadData.swift */,
+				6B68B74D26462489000D7ACC /* TrainingRecordData.swift */,
 			);
 			path = DataDefinition;
 			sourceTree = "<group>";
@@ -364,6 +376,7 @@
 				6BEC8BAB25AB1F7E00A5C413 /* Assets.xcassets in Resources */,
 				6BEC8BA925AB1F7D00A5C413 /* TrainingMenu.storyboard in Resources */,
 				6B3DB690262C6CC80045341E /* TrainingRecordHistory.storyboard in Resources */,
+				6B1B205226466F8600885CFA /* TrainingRecordHistoryTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,7 +504,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B68B74E26462489000D7ACC /* TrainingRecordData.swift in Sources */,
 				6BEC8BA625AB1F7D00A5C413 /* TrainingMenuViewController.swift in Sources */,
+				6B1B205126466F8600885CFA /* TrainingRecordHistoryTableViewCell.swift in Sources */,
 				6B68B6F326429715000D7ACC /* UIColor.swift in Sources */,
 				6B68B73D264564C1000D7ACC /* TrainingRecordTableViewCell.swift in Sources */,
 				6B68B6D22635B01B000D7ACC /* TrainingMenuData.swift in Sources */,
@@ -499,6 +514,7 @@
 				6B3DB688262C6CBD0045341E /* TrainingRecordHistoryViewController.swift in Sources */,
 				6B68B70F26442E66000D7ACC /* TrainingRecordViewController.swift in Sources */,
 				6B68B6E2264272DE000D7ACC /* TrainingStrengthRecommendView.swift in Sources */,
+				6B68B749264619A3000D7ACC /* TrainingLoadData.swift in Sources */,
 				6B68B7002642F4CE000D7ACC /* Date.swift in Sources */,
 				6BEC8BA425AB1F7D00A5C413 /* SceneDelegate.swift in Sources */,
 			);

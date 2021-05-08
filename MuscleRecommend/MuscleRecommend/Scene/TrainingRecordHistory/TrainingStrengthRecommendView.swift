@@ -15,8 +15,10 @@ class TrainingStrengthRecommendView: UIView {
     @IBOutlet weak var recommendLabel: UILabel!
     // 強度ラベル
     @IBOutlet weak var strengthLabel: UILabel!
-    // 推奨セットとレップ数ラベル
-    @IBOutlet weak var setAndRepLabel: UILabel!
+    // 推奨負荷量ラベル
+    @IBOutlet weak var recommendedSetLabel: UILabel!
+    @IBOutlet weak var recommendedWeightLabel: UILabel!
+    @IBOutlet weak var recommendedRepLabel: UILabel!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
