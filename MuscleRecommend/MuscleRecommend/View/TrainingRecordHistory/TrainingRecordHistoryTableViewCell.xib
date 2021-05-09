@@ -124,7 +124,6 @@
                             </view>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="IjC-dF-NSS" firstAttribute="leading" secondItem="mOu-XK-Ylz" secondAttribute="trailing" constant="10" id="6ry-xB-ciQ"/>
                             <constraint firstItem="We4-W4-8E5" firstAttribute="leading" secondItem="IjC-dF-NSS" secondAttribute="trailing" id="LlS-5n-Zgg"/>
                             <constraint firstItem="mOu-XK-Ylz" firstAttribute="leading" secondItem="yyU-R7-Cjx" secondAttribute="trailing" id="MYY-Qv-SKs"/>
                         </constraints>

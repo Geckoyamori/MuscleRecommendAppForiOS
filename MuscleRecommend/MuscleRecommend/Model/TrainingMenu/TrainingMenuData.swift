@@ -19,7 +19,7 @@ class TrainingMenuData: Object {
     // 作成日時
     @objc dynamic var createdDate: Date = Date().toJapaneseDeviceDate()
     // 更新日時
-    @objc dynamic var uodatedDate: Date = Date().toJapaneseDeviceDate()
+    @objc dynamic var updatedDate: Date = Date().toJapaneseDeviceDate()
     
     // 筋トレメニューidをプライマリーキーに設定
     override class func primaryKey() -> String? {

@@ -32,4 +32,9 @@ class TrainingRecordHistoryTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+//    // 推奨ラベルを非表示
+//    func hideRecommendedLabel() {
+//        
+//    }
+    
 }

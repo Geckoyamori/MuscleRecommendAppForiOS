@@ -17,22 +17,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BfA-ZJ-iuK">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="188" width="414" height="674"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XF5-rg-PMb">
+                                <rect key="frame" x="0.0" y="88" width="414" height="100"/>
+                            </pickerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="D6j-ao-JSj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="BfA-ZJ-iuK" firstAttribute="top" secondItem="D6j-ao-JSj" secondAttribute="top" id="A0l-jd-XtS"/>
                             <constraint firstItem="D6j-ao-JSj" firstAttribute="bottom" secondItem="BfA-ZJ-iuK" secondAttribute="bottom" id="LCe-Pr-JIA"/>
+                            <constraint firstItem="BfA-ZJ-iuK" firstAttribute="top" secondItem="XF5-rg-PMb" secondAttribute="bottom" id="Lpk-Tf-ySh"/>
+                            <constraint firstItem="BfA-ZJ-iuK" firstAttribute="top" secondItem="D6j-ao-JSj" secondAttribute="top" constant="100" id="Mmy-Nj-rDH"/>
                             <constraint firstItem="D6j-ao-JSj" firstAttribute="trailing" secondItem="BfA-ZJ-iuK" secondAttribute="trailing" id="XFx-Cq-Nti"/>
                             <constraint firstItem="BfA-ZJ-iuK" firstAttribute="leading" secondItem="D6j-ao-JSj" secondAttribute="leading" id="dS8-1b-BCD"/>
+                            <constraint firstItem="D6j-ao-JSj" firstAttribute="trailing" secondItem="XF5-rg-PMb" secondAttribute="trailing" id="gfB-s5-gTX"/>
+                            <constraint firstItem="XF5-rg-PMb" firstAttribute="leading" secondItem="D6j-ao-JSj" secondAttribute="leading" id="hCw-NL-UMd"/>
+                            <constraint firstItem="XF5-rg-PMb" firstAttribute="top" secondItem="D6j-ao-JSj" secondAttribute="top" id="nTC-mR-Yo5"/>
                         </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="recordTableView" destination="BfA-ZJ-iuK" id="Nvl-xN-VNx"/>
+                        <outlet property="strengthPickerView" destination="XF5-rg-PMb" id="ZnK-il-9ba"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rnJ-F9-CbA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

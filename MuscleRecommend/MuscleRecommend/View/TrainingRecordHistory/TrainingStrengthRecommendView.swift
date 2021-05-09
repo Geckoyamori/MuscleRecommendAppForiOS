@@ -9,6 +9,15 @@ import UIKit
 
 class TrainingStrengthRecommendView: UIView {
     
+    // grayView
+    @IBOutlet weak var grayView: UIView! {
+        didSet {
+            grayView.isHidden = true
+            grayView.backgroundColor = UIColor.init(hex: "c0c0c0", alpha: 1.0)
+        }
+    }
+    // grayView上のラベル
+    @IBOutlet weak var grayViewLabel: UILabel!
     // stackView
     @IBOutlet weak var stackView: UIStackView!
     // 推奨ラベル

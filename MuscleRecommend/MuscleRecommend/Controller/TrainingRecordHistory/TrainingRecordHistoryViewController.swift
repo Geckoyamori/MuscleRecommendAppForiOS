@@ -11,8 +11,8 @@ import RealmSwift
 // D-002
 class TrainingRecordHistoryViewController: UIViewController {
     
-    // Realm
-    let realm = try! Realm()
+    // 筋トレ記録モデル
+    let trainingRecordModel = TrainingRecordModel()
     
     // D-001からのパラメータ
     // 筋トレメニュー
@@ -28,13 +28,15 @@ class TrainingRecordHistoryViewController: UIViewController {
     let highStrength = "高強度"
     let mediumStrength = "中強度"
     let lowStrength = "低強度"
-    let high = "High"
-    let medium = "Medium"
-    let low = "Low"
+    let highStrengthDescription = "初回の高強度トレーニングを記録後に、\n次回以降の推奨メニューが表示されます。"
+    let mediumStrengthDescription = "初回の中強度トレーニングを記録後に、\n次回以降の推奨メニューが表示されます。"
+    let lowStrengthDescription = "初回の低強度トレーニングを記録後に、\n次回以降の推奨メニューが表示されます。"
     // 筋トレ記録のtableView
     @IBOutlet weak var trainingRecordTableView: UITableView!
     
     // D-002のパラメータ
+    // 筋トレ記録id
+    var trainingRecordId: String?
     // 筋トレ記録のDBの一覧取得結果
     var trainingRecordList: Results<TrainingRecordData>?
     // 直近の筋トレ記録取得結果
@@ -46,11 +48,15 @@ class TrainingRecordHistoryViewController: UIViewController {
     var selectedRecommendedSet: Int?
     var selectedRecommendedWeight: Double?
     var selectedRecommendedRep: Int?
+    // 総負荷量Viewからの遷移かどうかを判定するフラグ
+    var recommendFlag: Bool = false
     
-
     override func viewDidLoad() {
         // navigationbarの設定
         title = trainingMenuName
+        let addBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addBarButtonTapped(_:)))
+        self.navigationItem.rightBarButtonItem = addBarButtonItem
+        
         // tableViewのdelegate
         trainingRecordTableView.delegate = self
         trainingRecordTableView.dataSource = self
@@ -58,7 +64,7 @@ class TrainingRecordHistoryViewController: UIViewController {
         trainingRecordTableView.register(UINib(nibName: "TrainingRecordHistoryTableViewCell", bundle: nil), forCellReuseIdentifier: "trainingRecordHistoryTableViewCell")
         
         // 筋トレメニューidに紐づく筋トレ記録を格納するリストの取得
-        selectTrainingRecordList(trainingMenuId: trainingMenuId!)
+        trainingRecordList = trainingRecordModel.selectTrainingRecordList(trainingMenuId: trainingMenuId!)
         
         // 総負荷量Viewのデザイン設定
         setMuscleStrengthRecommendView()
@@ -66,10 +72,22 @@ class TrainingRecordHistoryViewController: UIViewController {
     
     // D-003で筋トレ負荷量データを保存した際に、D-002で行う処理
     override func viewWillAppear(_ animated: Bool) {
+        // パラメータの初期化
+        trainingRecordId = nil
+        selectedTrainingStrength = nil
+        selectedRecommendedSet = nil
+        selectedRecommendedWeight = nil
+        selectedRecommendedRep = nil
+        recommendFlag = false
         // tableViewを更新
         trainingRecordTableView.reloadData()
         // 総負荷量の設定
         setMuscleStrengthRecommend()
+    }
+    
+    // Addボタン押下時の処理
+    @objc func addBarButtonTapped(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "toTrainingRecordViewController", sender: nil)
     }
     
     // 総負荷量Viewのデザイン設定
@@ -94,10 +112,14 @@ class TrainingRecordHistoryViewController: UIViewController {
     
     // 高強度筋トレ総負荷量の設定
     func setHighStrengthTrainingRecommend() {
-        let sortedHighStrengthTrainingRecord = trainingRecordList?.filter("trainingStrength == '\(String(describing: high))'").sorted(byKeyPath: "createdDate", ascending: false)
+        let sortedHighStrengthTrainingRecord = trainingRecordModel.selectTrainingRecordListByStrength(trainingMenuId: trainingMenuId!, strength: highStrength)
+        // 高強度筋トレを一度も記録したことがない場合は、総負荷量Viewをグレーアウト
         if sortedHighStrengthTrainingRecord?.count == 0 {
-            
+            setGrayView(strengthReccomendView: highStrengthReccomendView, strengthDescription: highStrengthDescription)
         } else {
+            // グレーアウトを解除
+            removeGrayView(strengthReccomendView: highStrengthReccomendView)
+            highStrengthReccomendView.grayView.isHidden = true
             recentHighStrengthTrainingRecord = sortedHighStrengthTrainingRecord![0]
             highStrengthReccomendView.recommendedSetLabel.text = String(5)
             highStrengthReccomendView.recommendedWeightLabel.text = String(floor(10 * recentHighStrengthTrainingRecord!.totalMainTrainingLoad / 25) / 10)
@@ -107,10 +129,13 @@ class TrainingRecordHistoryViewController: UIViewController {
     
     // 中強度筋トレ総負荷量の設定
     func setMediumStrengthTrainingRecommend() {
-        let sortedMediumStrengthTrainingRecord = trainingRecordList?.filter("trainingStrength == '\(String(describing: medium))'").sorted(byKeyPath: "createdDate", ascending: false)
+        let sortedMediumStrengthTrainingRecord = trainingRecordModel.selectTrainingRecordListByStrength(trainingMenuId: trainingMenuId!, strength: mediumStrength)
+        // 中強度筋トレを一度も記録したことがない場合は、総負荷量Viewをグレーアウト
         if sortedMediumStrengthTrainingRecord?.count == 0 {
-            
+            setGrayView(strengthReccomendView: mediumStrengthReccomendView, strengthDescription: mediumStrengthDescription)
         } else {
+            // グレーアウトを解除
+            removeGrayView(strengthReccomendView: mediumStrengthReccomendView)
             recentMediumStrengthTrainingRecord = sortedMediumStrengthTrainingRecord![0]
             mediumStrengthReccomendView.recommendedSetLabel.text = String(4)
             mediumStrengthReccomendView.recommendedWeightLabel.text = String(floor(10 * recentMediumStrengthTrainingRecord!.totalMainTrainingLoad / 40) / 10)
@@ -120,10 +145,14 @@ class TrainingRecordHistoryViewController: UIViewController {
     
     // 低強度筋トレ総負荷量の設定
     func setLowStrengthTrainingRecommend() {
-        let sortedLowStrengthTrainingRecord = trainingRecordList?.filter("trainingStrength == '\(String(describing: low))'").sorted(byKeyPath: "createdDate", ascending: false)
+        let sortedLowStrengthTrainingRecord = trainingRecordModel.selectTrainingRecordListByStrength(trainingMenuId: trainingMenuId!, strength: lowStrength)
+        // 低強度筋トレを一度も記録したことがない場合は、総負荷量Viewをグレーアウト
         if sortedLowStrengthTrainingRecord?.count == 0 {
-            
+            setGrayView(strengthReccomendView: lowStrengthReccomendView, strengthDescription: lowStrengthDescription)
         } else {
+            // グレーアウトを解除
+            removeGrayView(strengthReccomendView: lowStrengthReccomendView)
+            lowStrengthReccomendView.grayView.isHidden = true
             recentLowStrengthTrainingRecord = sortedLowStrengthTrainingRecord![0]
             lowStrengthReccomendView.recommendedSetLabel.text = String(3)
             lowStrengthReccomendView.recommendedWeightLabel.text = String(floor(10 * recentLowStrengthTrainingRecord!.totalMainTrainingLoad / 45) / 10)
@@ -131,39 +160,57 @@ class TrainingRecordHistoryViewController: UIViewController {
         }
     }
     
+    // 総負荷量Viewをグレーアウト
+    func setGrayView(strengthReccomendView: TrainingStrengthRecommendView, strengthDescription: String) {
+        strengthReccomendView.grayView.isHidden = false
+        strengthReccomendView.isUserInteractionEnabled = false
+        strengthReccomendView.grayViewLabel.text = strengthDescription
+    }
+    
+    // 総負荷量Viewのグレーアウトを解除
+    func removeGrayView(strengthReccomendView: TrainingStrengthRecommendView) {
+        strengthReccomendView.grayView.isHidden = true
+        strengthReccomendView.isUserInteractionEnabled = true
+    }
+    
     // segueの準備
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "toTrainingRecordViewController") {
             let trainingRecordViewController: TrainingRecordViewController = segue.destination as! TrainingRecordViewController
+            trainingRecordViewController.trainingRecordId = trainingRecordId
             trainingRecordViewController.trainingMenuName = trainingMenuName
             trainingRecordViewController.trainingMenuId = trainingMenuId
             trainingRecordViewController.trainingStrength = selectedTrainingStrength
             trainingRecordViewController.recommendedSet = selectedRecommendedSet
             trainingRecordViewController.recommendedWeight = selectedRecommendedWeight
             trainingRecordViewController.recommendedRep = selectedRecommendedRep
+            trainingRecordViewController.recommendFlag = recommendFlag
         }
     }
     
     // 総負荷量Viewをタップ時の処理
     @IBAction func tapHighStrengthReccomendView(_ sender: Any) {
-        setSelectedMuscleStrengthRecommend(strength: high, set: Int(highStrengthReccomendView.recommendedSetLabel.text!)!, weight: Double(highStrengthReccomendView.recommendedWeightLabel.text!)!, rep: Int(highStrengthReccomendView.recommendedRepLabel.text!)!)
+        setSelectedMuscleStrengthRecommend(strength: highStrength, set: Int(highStrengthReccomendView.recommendedSetLabel.text!)!, weight: Double(highStrengthReccomendView.recommendedWeightLabel.text!)!, rep: Int(highStrengthReccomendView.recommendedRepLabel.text!)!, recommendFlag: true)
         performSegue(withIdentifier: "toTrainingRecordViewController", sender: nil)
     }
     @IBAction func tapMediumStrengthReccomendView(_ sender: Any) {
-        setSelectedMuscleStrengthRecommend(strength: medium, set: Int(mediumStrengthReccomendView.recommendedSetLabel.text!)!, weight: Double(mediumStrengthReccomendView.recommendedWeightLabel.text!)!, rep: Int(mediumStrengthReccomendView.recommendedRepLabel.text!)!)
+        setSelectedMuscleStrengthRecommend(strength: mediumStrength, set: Int(mediumStrengthReccomendView.recommendedSetLabel.text!)!, weight: Double(mediumStrengthReccomendView.recommendedWeightLabel.text!)!, rep: Int(mediumStrengthReccomendView.recommendedRepLabel.text!)!, recommendFlag: true)
         performSegue(withIdentifier: "toTrainingRecordViewController", sender: nil)
     }
     @IBAction func tapLowStrengthReccomendView(_ sender: Any) {
-        setSelectedMuscleStrengthRecommend(strength: low, set: Int(lowStrengthReccomendView.recommendedSetLabel.text!)!, weight: Double(lowStrengthReccomendView.recommendedWeightLabel.text!)!, rep: Int(lowStrengthReccomendView.recommendedRepLabel.text!)!)
+        setSelectedMuscleStrengthRecommend(strength: lowStrength, set: Int(lowStrengthReccomendView.recommendedSetLabel.text!)!, weight: Double(lowStrengthReccomendView.recommendedWeightLabel.text!)!, rep: Int(lowStrengthReccomendView.recommendedRepLabel.text!)!, recommendFlag: true)
         performSegue(withIdentifier: "toTrainingRecordViewController", sender: nil)
     }
     
     // 選択された筋トレ強度と負荷量を設定
-    func setSelectedMuscleStrengthRecommend(strength: String, set: Int, weight: Double, rep: Int) {
+    func setSelectedMuscleStrengthRecommend(strength: String, set: Int, weight: Double, rep: Int, recommendFlag: Bool) {
         selectedTrainingStrength = strength
         selectedRecommendedSet = set
         selectedRecommendedWeight = weight
         selectedRecommendedRep = rep
+        self.recommendFlag = recommendFlag
+        // 総負荷量Viewをタップ時は、筋トレ記録idはnil
+        trainingRecordId = nil
     }
 }
 
@@ -178,13 +225,13 @@ extension TrainingRecordHistoryViewController: UITableViewDelegate, UITableViewD
         let cell: TrainingRecordHistoryTableViewCell = tableView.dequeueReusableCell(withIdentifier: "trainingRecordHistoryTableViewCell", for: indexPath) as! TrainingRecordHistoryTableViewCell
         // 筋トレ強度を設定
         switch trainingRecordList?[indexPath.row].trainingStrength {
-        case high:
+        case highStrength:
             cell.recommendedStrengthLabel.text = highStrength
             cell.recommendView.backgroundColor = UIColor.init(hex: "ff0000", alpha: 0.3)
-        case medium:
+        case mediumStrength:
             cell.recommendedStrengthLabel.text = mediumStrength
             cell.recommendView.backgroundColor = UIColor.init(hex: "ffff00", alpha: 0.3)
-        case low:
+        case lowStrength:
             cell.recommendedStrengthLabel.text = lowStrength
             cell.recommendView.backgroundColor = UIColor.init(hex: "00ffff", alpha: 0.3)
         default:
@@ -192,6 +239,10 @@ extension TrainingRecordHistoryViewController: UITableViewDelegate, UITableViewD
         }
         // 筋トレ記録日付を設定
         cell.trainingRecordDate.text = Date().toStringType(date: (trainingRecordList?[indexPath.row].createdDate)!)
+//        // 推奨負荷量Viewから遷移した筋トレ記録
+//        if trainingRecordList?[indexPath.row].recommendedSet == 0 {
+//            cell.hideRecommendedLabel()
+//        }
         // 推奨負荷量を設定
         cell.recommendedSetLabel.text = String((trainingRecordList?[indexPath.row].recommendedSet)!)
         cell.recommendedWeightLabel.text = String((trainingRecordList?[indexPath.row].recommendedWeight)!)
@@ -201,40 +252,14 @@ extension TrainingRecordHistoryViewController: UITableViewDelegate, UITableViewD
     // テーブルビューのセルをスワイプで削除
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCell.EditingStyle.delete {
-            deleteTrainingRecordData(index: indexPath.row)
+            trainingRecordModel.deleteTrainingRecordData(trainingRecordList: trainingRecordList!, index: indexPath.row)
             trainingRecordTableView.deleteRows(at: [indexPath as IndexPath], with: UITableView.RowAnimation.automatic)
         }
     }
-//    // テーブルビューのセル選択時の画面遷移
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        tableView.deselectRow(at: indexPath, animated: true)
-//        selectedTrainingMenu = trainingMenuList[indexPath.row].trainingMenuName
-//        selectedTrainingMenuId = trainingMenuList[indexPath.row].trainingMenuId
-//        performSegue(withIdentifier: "toTrainingRecordHistoryViewController", sender: nil)
-//    }
-}
-
-// Realmのメソッド
-extension TrainingRecordHistoryViewController {
-    // 筋トレメニューidに紐づく筋トレ記録を格納するリストの取得
-    func selectTrainingRecordList(trainingMenuId: String) {
-        trainingRecordList = realm.objects(TrainingRecordData.self).filter("trainingMenuId == '\(String(describing: trainingMenuId))'").sorted(byKeyPath: "createdDate", ascending: false)
-    }
-    
-//    // 筋トレメニューのDBに追加
-//    func insertTrainingMenuData(trainingMenuName: String) {
-//        // 追加する筋トレメニューの設定
-//        let trainingMenuData = TrainingMenuData()
-//        trainingMenuData.trainingMenuName = trainingMenuName
-//        try! realm.write {
-//            realm.add(TrainingMenuData(value: trainingMenuData))
-//        }
-//    }
-//
-    // 筋トレ記録のDBから削除
-    func deleteTrainingRecordData(index: Int) {
-        try! realm.write {
-            realm.delete(trainingRecordList![index])
-        }
+    // テーブルビューのセル選択時の画面遷移
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        trainingRecordId = trainingRecordList?[indexPath.row].trainingRecordId
+        performSegue(withIdentifier: "toTrainingRecordViewController", sender: nil)
     }
 }

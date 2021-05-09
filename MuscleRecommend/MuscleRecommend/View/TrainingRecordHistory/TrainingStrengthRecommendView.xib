@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TrainingStrengthRecommendView" customModule="MuscleRecommend" customModuleProvider="target">
             <connections>
+                <outlet property="grayView" destination="l5x-Hr-Q9L" id="EKA-6j-ace"/>
+                <outlet property="grayViewLabel" destination="Die-0U-GGn" id="QQu-mP-SVg"/>
                 <outlet property="recommendLabel" destination="RDs-pU-0Ux" id="oo2-3f-5ss"/>
                 <outlet property="recommendedRepLabel" destination="zzZ-nR-s3h" id="2by-MS-LyW"/>
                 <outlet property="recommendedSetLabel" destination="jYn-KT-IBO" id="a8x-KE-v0G"/>
@@ -100,17 +102,39 @@
                         <constraint firstItem="XXh-NT-UDQ" firstAttribute="leading" secondItem="2bW-TU-b6R" secondAttribute="trailing" id="ibp-DY-dN9"/>
                     </constraints>
                 </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l5x-Hr-Q9L" userLabel="Gray View">
+                    <rect key="frame" x="0.0" y="0.0" width="500" height="166"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Die-0U-GGn">
+                            <rect key="frame" x="85.5" y="62.5" width="329.5" height="41"/>
+                            <string key="text">初回のトレーニングを記録後に、
+次回以降の推奨メニューが表示されます。</string>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="Die-0U-GGn" firstAttribute="centerY" secondItem="l5x-Hr-Q9L" secondAttribute="centerY" id="RDa-Rm-akQ"/>
+                        <constraint firstItem="Die-0U-GGn" firstAttribute="centerX" secondItem="l5x-Hr-Q9L" secondAttribute="centerX" id="V5f-eg-t6m"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fZn-w9-oi4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="0NW-9j-T3Z"/>
                 <constraint firstItem="fZn-w9-oi4" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="1c5-w1-Ln0"/>
+                <constraint firstItem="l5x-Hr-Q9L" firstAttribute="leading" secondItem="fZn-w9-oi4" secondAttribute="leading" id="7Wi-PM-uAM"/>
                 <constraint firstItem="fZn-w9-oi4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="GjB-mn-obh"/>
+                <constraint firstItem="l5x-Hr-Q9L" firstAttribute="trailing" secondItem="fZn-w9-oi4" secondAttribute="trailing" id="Qel-5N-2FG"/>
+                <constraint firstItem="l5x-Hr-Q9L" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="ebJ-wK-9Mh"/>
                 <constraint firstItem="fZn-w9-oi4" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="uEY-eY-WO9"/>
+                <constraint firstItem="l5x-Hr-Q9L" firstAttribute="top" secondItem="fZn-w9-oi4" secondAttribute="top" id="wyQ-Yr-PH0"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="257.97101449275362" y="-36.495535714285715"/>
+            <point key="canvasLocation" x="257.97101449275362" y="-36.830357142857139"/>
         </view>
     </objects>
     <resources>

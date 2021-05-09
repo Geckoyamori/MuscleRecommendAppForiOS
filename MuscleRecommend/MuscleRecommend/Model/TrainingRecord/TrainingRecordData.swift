@@ -26,10 +26,12 @@ class TrainingRecordData: Object {
     @objc dynamic var totalWarmUpTrainingLoad: Double = 0
     // Main筋トレ総負荷量
     @objc dynamic var totalMainTrainingLoad: Double = 0
+    // 推奨フラグ
+    @objc dynamic var recommendFlag: Bool = false
     // 作成日時
     @objc dynamic var createdDate: Date = Date().toJapaneseDeviceDate()
     // 更新日時
-    @objc dynamic var uodatedDate: Date = Date().toJapaneseDeviceDate()
+    @objc dynamic var updatedDate: Date = Date().toJapaneseDeviceDate()
     
     // 筋トレ記録idをプライマリーキーに設定
     override class func primaryKey() -> String? {
