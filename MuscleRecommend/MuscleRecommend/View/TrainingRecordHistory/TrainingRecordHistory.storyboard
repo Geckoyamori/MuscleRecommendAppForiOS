@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rF9-P3-TPD">
-                                <rect key="frame" x="0.0" y="398" width="414" height="464"/>
+                                <rect key="frame" x="0.0" y="498" width="414" height="364"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ESG-hV-516">
@@ -57,7 +57,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ESG-hV-516" firstAttribute="leading" secondItem="I5I-EA-pCk" secondAttribute="leading" constant="10" id="9A7-tc-pwg"/>
-                            <constraint firstItem="rF9-P3-TPD" firstAttribute="top" secondItem="ESG-hV-516" secondAttribute="bottom" id="IYh-fT-ROS"/>
+                            <constraint firstItem="rF9-P3-TPD" firstAttribute="top" secondItem="ESG-hV-516" secondAttribute="bottom" constant="100" id="IYh-fT-ROS"/>
                             <constraint firstItem="I5I-EA-pCk" firstAttribute="trailing" secondItem="ESG-hV-516" secondAttribute="trailing" constant="10" id="YcU-uV-LnY"/>
                             <constraint firstItem="rF9-P3-TPD" firstAttribute="leading" secondItem="I5I-EA-pCk" secondAttribute="leading" id="a6x-WY-pPG"/>
                             <constraint firstItem="I5I-EA-pCk" firstAttribute="bottom" secondItem="rF9-P3-TPD" secondAttribute="bottom" id="b0R-yk-DSP"/>

@@ -29,15 +29,31 @@ class TrainingRecordViewController: UIViewController {
     var recommendedWeight: Double?
     // 推奨回数
     var recommendedRep: Int?
-    // 総負荷量Viewからの遷移かどうかを判定するフラグ
+    // 筋トレ記録が総負荷量View経由の登録かどうかを判定するフラグ
     var recommendFlag: Bool?
     
     // 負荷量を記録するtableView
-    @IBOutlet weak var recordTableView: UITableView!
+    @IBOutlet weak var recordTableView: UITableView! {
+        didSet {
+            // tableViewのdelegate
+            recordTableView.delegate = self
+            recordTableView.dataSource = self
+            // tableViewとカスタムセルとの接続
+            recordTableView.register(UINib(nibName: "TrainingRecordTableViewCell", bundle: nil), forCellReuseIdentifier: "trainingRecordTableViewCell")
+            // tableViewとカスタムヘッダーとの接続
+            recordTableView.register(UINib(nibName: "TrainingRecordTableViewHeaderView", bundle: nil), forHeaderFooterViewReuseIdentifier: "TrainingRecordTableViewHeaderView")
+        }
+    }
     // 負荷量を記録するtableViewのsection
     let section = ["Warm Up", "Main"]
     // 強度を選択するpickerView
-    @IBOutlet weak var strengthPickerView: UIPickerView!
+    @IBOutlet weak var strengthPickerView: UIPickerView! {
+        didSet {
+            // pickerViewのdelegate
+            strengthPickerView.delegate = self
+            strengthPickerView.dataSource = self
+        }
+    }
     // pickerViewの配列
     let strengthPickerArray = ["高強度", "中強度", "低強度"]
     
@@ -55,6 +71,11 @@ class TrainingRecordViewController: UIViewController {
     var totalMainTrainingLoad: Double = 0
     // saveボタン押下フラグ
     var saveButtonFlag: Bool = false
+    // 初期表示のセット数
+    var warmUpNewRegistrationNumberOfSet: Int = 5
+    var warmUpEditRegistrationNumberOfSet: Int = 0
+    var mainNewRegistrationNumberOfSet: Int = 7
+    var mainEditRegistrationNumberOfSet: Int = 0
     
     override func viewDidLoad() {
         // navigationbarの設定
@@ -62,17 +83,15 @@ class TrainingRecordViewController: UIViewController {
         let saveBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveBarButtonTapped(_:)))
         self.navigationItem.rightBarButtonItem = saveBarButtonItem
         
-        // 初期化
-        trainingStrength = "中強度"
-        
-        // tableViewのdelegate
-        recordTableView.delegate = self
-        recordTableView.dataSource = self
-        // tableViewとカスタムセルとの接続
-        recordTableView.register(UINib(nibName: "TrainingRecordTableViewCell", bundle: nil), forCellReuseIdentifier: "trainingRecordTableViewCell")
-        // pickerViewのdelegate
-        strengthPickerView.delegate = self
-        strengthPickerView.dataSource = self
+        if trainingStrength == nil {
+            // 完全新規登録の場合、中強度を初期値として設定
+            strengthPickerView.selectRow(1, inComponent: 0, animated: false)
+            trainingStrength = strengthPickerArray[1]
+            
+        } else {
+            // 推奨遷移登録or編集登録の場合、遷移元の強度を初期値として設定
+            strengthPickerView.selectRow(strengthPickerArray.firstIndex(of: trainingStrength!)!, inComponent: 0, animated: false)
+        }
         
         // textField以外をタップした際にキーボードを閉じるための処理
         setDismissKeyboard()
@@ -82,6 +101,9 @@ class TrainingRecordViewController: UIViewController {
             // 筋トレ記録idとセット種類に紐づく筋トレ負荷量リストの取得
             warmUpTrainingLoadList = trainingLoadModel.selectTrainingLoadList(trainingRecordId: trainingRecordId!, setType: section[0])
             mainTrainingLoadList = trainingLoadModel.selectTrainingLoadList(trainingRecordId: trainingRecordId!, setType: section[1])
+            // 筋トレ負荷量リストのセット数を設定
+            warmUpEditRegistrationNumberOfSet = warmUpTrainingLoadList!.count
+            mainEditRegistrationNumberOfSet = mainTrainingLoadList!.count
             // 筋トレ記録idに紐づく筋トレ記録の取得
             targetTrainingRecord = trainingLoadModel.selectTargetTrainingRecord(trainingRecordId: trainingRecordId!)
         }
@@ -145,24 +167,40 @@ class TrainingRecordViewController: UIViewController {
 }
 
 // tableViewのメソッド
-extension TrainingRecordViewController: UITableViewDelegate, UITableViewDataSource {
+extension TrainingRecordViewController: UITableViewDelegate, UITableViewDataSource, TrainingRecordTableViewHeaderViewDelegate {
+
     // tableViewの行数を設定
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         // Warm Upの場合
         case 0:
-            // 新祈登録の場合
             if trainingRecordId == nil {
-                return 5
+                // 推奨新規登録or完全新規登録の場合
+                return warmUpNewRegistrationNumberOfSet
+    
+            } else {
+                // 編集登録の場合
+                return warmUpEditRegistrationNumberOfSet
             }
-            return warmUpTrainingLoadList!.count
+            
         // Mainの場合
         case 1:
-            // 新祈登録の場合
             if trainingRecordId == nil {
-                return 7
+                
+                // 推奨新規登録の場合、推奨セット数を返す
+                if recommendFlag! {
+                    return recommendedSet!
+                    
+                // 完全新規登録の場合
+                } else {
+                    return mainNewRegistrationNumberOfSet
+                }
+                
+            } else {
+                // 編集登録の場合
+                return mainEditRegistrationNumberOfSet
             }
-            return mainTrainingLoadList!.count
+            
         default:
             return 0
         }
@@ -170,11 +208,12 @@ extension TrainingRecordViewController: UITableViewDelegate, UITableViewDataSour
     // tableViewのセルを設定
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: TrainingRecordTableViewCell = tableView.dequeueReusableCell(withIdentifier: "trainingRecordTableViewCell", for: indexPath) as! TrainingRecordTableViewCell
+        // 推奨ラベルを非表示
+        cell.hideRecommendedLabel()
+        
         switch indexPath.section {
         // Warm Upの場合
         case 0:
-            // 推奨ラベルを非表示
-            cell.hideRecommendedLabel()
             // 編集登録の初期表示の場合、編集前の記録をセットする
             if trainingRecordId != nil && !saveButtonFlag {
                 cell.weightTextField.text = String(warmUpTrainingLoadList![indexPath.row].weight)
@@ -188,6 +227,11 @@ extension TrainingRecordViewController: UITableViewDelegate, UITableViewDataSour
             return cell
         // Mainの場合
         case 1:
+            // 推奨新規登録or編集登録の場合
+            if recommendFlag! {
+                // 推奨ラベルを表示
+                cell.showRecommendedLabel(recommendedWeight: recommendedWeight!, recommendedRep: recommendedRep!)
+            }
             // 編集登録の場合、編集前の記録をセットする
             if trainingRecordId != nil && !saveButtonFlag {
                 cell.weightTextField.text = String(mainTrainingLoadList![indexPath.row].weight)
@@ -207,9 +251,37 @@ extension TrainingRecordViewController: UITableViewDelegate, UITableViewDataSour
     func numberOfSections(in tableView: UITableView) -> Int {
         return section.count
     }
-    // section名を設定
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return self.section[section]
+    // sectionのViewを設定
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header: TrainingRecordTableViewHeaderView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "TrainingRecordTableViewHeaderView") as! TrainingRecordTableViewHeaderView
+        // delegateの処理の代理人をselfに指定
+        header.trainingRecordTableViewHeaderViewDelegate = self
+        header.setUp(sectionName: self.section[section])
+        return header
+    }
+    // sectionの高さを設定
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 44
+    }
+    // セットを1行追加
+    func addSet() {
+        if trainingRecordId == nil {
+            
+            if recommendFlag! {
+                // 推奨新規登録の場合
+                recommendedSet! += 1
+            
+            } else {
+                // 完全新規登録の場合
+                mainNewRegistrationNumberOfSet += 1
+            }
+            
+        } else {
+            // 編集登録の場合
+//            mainEditRegistrationNumberOfSet += 1
+        }
+        
+        recordTableView.reloadData()
     }
 }
 

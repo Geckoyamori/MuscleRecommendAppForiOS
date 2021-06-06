@@ -58,4 +58,15 @@ class TrainingRecordTableViewCell: UITableViewCell, UITextFieldDelegate {
         recommendedRepLabel.isHidden = true
     }
     
+    // 推奨ラベルを非表示
+    func showRecommendedLabel(recommendedWeight: Double, recommendedRep: Int) {
+        recommendedLabel.isHidden = false
+        recommendedStringKgLabel.isHidden = false
+        recommendedStringRepLabel.isHidden = false
+        recommendedWeightLabel.isHidden = false
+        recommendedRepLabel.isHidden = false
+        // 推奨重量と推奨回数の設定
+        recommendedWeightLabel.text = String(recommendedWeight)
+        recommendedRepLabel.text = String(recommendedRep)
+    }
 }

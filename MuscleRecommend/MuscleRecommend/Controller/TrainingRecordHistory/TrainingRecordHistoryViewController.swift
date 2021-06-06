@@ -32,7 +32,15 @@ class TrainingRecordHistoryViewController: UIViewController {
     let mediumStrengthDescription = "初回の中強度トレーニングを記録後に、\n次回以降の推奨メニューが表示されます。"
     let lowStrengthDescription = "初回の低強度トレーニングを記録後に、\n次回以降の推奨メニューが表示されます。"
     // 筋トレ記録のtableView
-    @IBOutlet weak var trainingRecordTableView: UITableView!
+    @IBOutlet weak var trainingRecordTableView: UITableView! {
+        didSet {
+            // tableViewのdelegate
+            trainingRecordTableView.delegate = self
+            trainingRecordTableView.dataSource = self
+            // tableViewとカスタムセルとの接続
+            trainingRecordTableView.register(UINib(nibName: "TrainingRecordHistoryTableViewCell", bundle: nil), forCellReuseIdentifier: "trainingRecordHistoryTableViewCell")
+        }
+    }
     
     // D-002のパラメータ
     // 筋トレ記録id
@@ -44,11 +52,11 @@ class TrainingRecordHistoryViewController: UIViewController {
     var recentMediumStrengthTrainingRecord: TrainingRecordData?
     var recentLowStrengthTrainingRecord: TrainingRecordData?
     // 選択された筋トレ強度と負荷量
-    var selectedTrainingStrength: String?
-    var selectedRecommendedSet: Int?
-    var selectedRecommendedWeight: Double?
-    var selectedRecommendedRep: Int?
-    // 総負荷量Viewからの遷移かどうかを判定するフラグ
+    var trainingStrength: String?
+    var recommendedSet: Int?
+    var recommendedWeight: Double?
+    var recommendedRep: Int?
+    // 筋トレ記録が①推奨新規登録or編集登録か②完全新規登録を判定するフラグ
     var recommendFlag: Bool = false
     
     override func viewDidLoad() {
@@ -56,12 +64,6 @@ class TrainingRecordHistoryViewController: UIViewController {
         title = trainingMenuName
         let addBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addBarButtonTapped(_:)))
         self.navigationItem.rightBarButtonItem = addBarButtonItem
-        
-        // tableViewのdelegate
-        trainingRecordTableView.delegate = self
-        trainingRecordTableView.dataSource = self
-        // tableViewとカスタムセルとの接続
-        trainingRecordTableView.register(UINib(nibName: "TrainingRecordHistoryTableViewCell", bundle: nil), forCellReuseIdentifier: "trainingRecordHistoryTableViewCell")
         
         // 筋トレメニューidに紐づく筋トレ記録を格納するリストの取得
         trainingRecordList = trainingRecordModel.selectTrainingRecordList(trainingMenuId: trainingMenuId!)
@@ -74,10 +76,10 @@ class TrainingRecordHistoryViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         // パラメータの初期化
         trainingRecordId = nil
-        selectedTrainingStrength = nil
-        selectedRecommendedSet = nil
-        selectedRecommendedWeight = nil
-        selectedRecommendedRep = nil
+        trainingStrength = nil
+        recommendedSet = nil
+        recommendedWeight = nil
+        recommendedRep = nil
         recommendFlag = false
         // tableViewを更新
         trainingRecordTableView.reloadData()
@@ -177,14 +179,14 @@ class TrainingRecordHistoryViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "toTrainingRecordViewController") {
             let trainingRecordViewController: TrainingRecordViewController = segue.destination as! TrainingRecordViewController
-            trainingRecordViewController.trainingRecordId = trainingRecordId
-            trainingRecordViewController.trainingMenuName = trainingMenuName
-            trainingRecordViewController.trainingMenuId = trainingMenuId
-            trainingRecordViewController.trainingStrength = selectedTrainingStrength
-            trainingRecordViewController.recommendedSet = selectedRecommendedSet
-            trainingRecordViewController.recommendedWeight = selectedRecommendedWeight
-            trainingRecordViewController.recommendedRep = selectedRecommendedRep
-            trainingRecordViewController.recommendFlag = recommendFlag
+            trainingRecordViewController.trainingRecordId = self.trainingRecordId
+            trainingRecordViewController.trainingMenuName = self.trainingMenuName
+            trainingRecordViewController.trainingMenuId = self.trainingMenuId
+            trainingRecordViewController.trainingStrength = self.trainingStrength
+            trainingRecordViewController.recommendedSet = self.recommendedSet
+            trainingRecordViewController.recommendedWeight = self.recommendedWeight
+            trainingRecordViewController.recommendedRep = self.recommendedRep
+            trainingRecordViewController.recommendFlag = self.recommendFlag
         }
     }
     
@@ -202,15 +204,15 @@ class TrainingRecordHistoryViewController: UIViewController {
         performSegue(withIdentifier: "toTrainingRecordViewController", sender: nil)
     }
     
-    // 選択された筋トレ強度と負荷量を設定
+    // 選択された総負荷量Viewの筋トレ強度と負荷量を設定
     func setSelectedMuscleStrengthRecommend(strength: String, set: Int, weight: Double, rep: Int, recommendFlag: Bool) {
-        selectedTrainingStrength = strength
-        selectedRecommendedSet = set
-        selectedRecommendedWeight = weight
-        selectedRecommendedRep = rep
+        self.trainingStrength = strength
+        self.recommendedSet = set
+        self.recommendedWeight = weight
+        self.recommendedRep = rep
         self.recommendFlag = recommendFlag
         // 総負荷量Viewをタップ時は、筋トレ記録idはnil
-        trainingRecordId = nil
+        self.trainingRecordId = nil
     }
 }
 
@@ -259,7 +261,17 @@ extension TrainingRecordHistoryViewController: UITableViewDelegate, UITableViewD
     // テーブルビューのセル選択時の画面遷移
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        trainingRecordId = trainingRecordList?[indexPath.row].trainingRecordId
+        setSelectedTrainingRecord(trainingRecordId: trainingRecordList![indexPath.row].trainingRecordId, strength: trainingRecordList![indexPath.row].trainingStrength, set: trainingRecordList![indexPath.row].recommendedSet, weight: trainingRecordList![indexPath.row].recommendedWeight, rep: trainingRecordList![indexPath.row].recommendedRep, recommendFlag: true)
         performSegue(withIdentifier: "toTrainingRecordViewController", sender: nil)
+    }
+    
+    // 選択された筋トレ記録の筋トレ強度と負荷量を設定
+    func setSelectedTrainingRecord(trainingRecordId: String, strength: String, set: Int, weight: Double, rep: Int, recommendFlag: Bool) {
+        self.trainingStrength = strength
+        self.recommendedSet = set
+        self.recommendedWeight = weight
+        self.recommendedRep = rep
+        self.recommendFlag = recommendFlag
+        self.trainingRecordId = trainingRecordId
     }
 }

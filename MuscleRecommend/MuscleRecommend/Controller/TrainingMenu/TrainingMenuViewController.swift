@@ -15,7 +15,13 @@ class TrainingMenuViewController: UIViewController {
     // navigationbarのタイトル
     let navigationBarTitle = "筋トレメニュー"
     // 筋トレメニューを表示するtableView
-    @IBOutlet weak var muscleMenuTableView: UITableView!
+    @IBOutlet weak var muscleMenuTableView: UITableView! {
+        didSet {
+            // tableViewのdelegate
+            muscleMenuTableView.delegate = self
+            muscleMenuTableView.dataSource = self
+        }
+    }
     
     // D-001のパラメータ
     // 筋トレメニューのDBの一覧取得結果
@@ -33,10 +39,6 @@ class TrainingMenuViewController: UIViewController {
         
         // navigationbarの設定
         title = navigationBarTitle
-        
-        // tableViewのdelegate
-        muscleMenuTableView.delegate = self
-        muscleMenuTableView.dataSource = self
 
         // 筋トレメニューを格納するリストの取得
         trainingMenuList = trainingMenuModel.selectTrainingMenuList()

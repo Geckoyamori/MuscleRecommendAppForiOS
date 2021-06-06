@@ -14,6 +14,8 @@
 		6B44008226480FFF00645E3A /* TrainingMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B44008126480FFF00645E3A /* TrainingMenuModel.swift */; };
 		6B4400872648126500645E3A /* TrainingRecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4400862648126500645E3A /* TrainingRecordModel.swift */; };
 		6B44008C264816E700645E3A /* TrainingLoadModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B44008B264816E700645E3A /* TrainingLoadModel.swift */; };
+		6B440091265A86CD00645E3A /* TrainingRecordTableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B440090265A86CD00645E3A /* TrainingRecordTableViewHeaderView.swift */; };
+		6B440096265A870F00645E3A /* TrainingRecordTableViewHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B440095265A870F00645E3A /* TrainingRecordTableViewHeaderView.xib */; };
 		6B68B6D22635B01B000D7ACC /* TrainingMenuData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B68B6D12635B01B000D7ACC /* TrainingMenuData.swift */; };
 		6B68B6E2264272DE000D7ACC /* TrainingStrengthRecommendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B68B6E1264272DE000D7ACC /* TrainingStrengthRecommendView.swift */; };
 		6B68B6E726427304000D7ACC /* TrainingStrengthRecommendView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B68B6E626427304000D7ACC /* TrainingStrengthRecommendView.xib */; };
@@ -67,6 +69,8 @@
 		6B44008126480FFF00645E3A /* TrainingMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingMenuModel.swift; sourceTree = "<group>"; };
 		6B4400862648126500645E3A /* TrainingRecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingRecordModel.swift; sourceTree = "<group>"; };
 		6B44008B264816E700645E3A /* TrainingLoadModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingLoadModel.swift; sourceTree = "<group>"; };
+		6B440090265A86CD00645E3A /* TrainingRecordTableViewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingRecordTableViewHeaderView.swift; sourceTree = "<group>"; };
+		6B440095265A870F00645E3A /* TrainingRecordTableViewHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainingRecordTableViewHeaderView.xib; sourceTree = "<group>"; };
 		6B68B6D12635B01B000D7ACC /* TrainingMenuData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingMenuData.swift; sourceTree = "<group>"; };
 		6B68B6E1264272DE000D7ACC /* TrainingStrengthRecommendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingStrengthRecommendView.swift; sourceTree = "<group>"; };
 		6B68B6E626427304000D7ACC /* TrainingStrengthRecommendView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainingStrengthRecommendView.xib; sourceTree = "<group>"; };
@@ -166,6 +170,8 @@
 				6B68B71626442E7A000D7ACC /* TrainingRecord.storyboard */,
 				6B68B73B264564C1000D7ACC /* TrainingRecordTableViewCell.swift */,
 				6B68B73C264564C1000D7ACC /* TrainingRecordTableViewCell.xib */,
+				6B440090265A86CD00645E3A /* TrainingRecordTableViewHeaderView.swift */,
+				6B440095265A870F00645E3A /* TrainingRecordTableViewHeaderView.xib */,
 			);
 			path = TrainingRecord;
 			sourceTree = "<group>";
@@ -441,6 +447,7 @@
 				6BEC8BAB25AB1F7E00A5C413 /* Assets.xcassets in Resources */,
 				6BEC8BA925AB1F7D00A5C413 /* TrainingMenu.storyboard in Resources */,
 				6B3DB690262C6CC80045341E /* TrainingRecordHistory.storyboard in Resources */,
+				6B440096265A870F00645E3A /* TrainingRecordTableViewHeaderView.xib in Resources */,
 				6B1B205226466F8600885CFA /* TrainingRecordHistoryTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -581,6 +588,7 @@
 				6B3DB688262C6CBD0045341E /* TrainingRecordHistoryViewController.swift in Sources */,
 				6B68B70F26442E66000D7ACC /* TrainingRecordViewController.swift in Sources */,
 				6B68B6E2264272DE000D7ACC /* TrainingStrengthRecommendView.swift in Sources */,
+				6B440091265A86CD00645E3A /* TrainingRecordTableViewHeaderView.swift in Sources */,
 				6B68B749264619A3000D7ACC /* TrainingLoadData.swift in Sources */,
 				6B68B7002642F4CE000D7ACC /* Date.swift in Sources */,
 				6BEC8BA425AB1F7D00A5C413 /* SceneDelegate.swift in Sources */,
