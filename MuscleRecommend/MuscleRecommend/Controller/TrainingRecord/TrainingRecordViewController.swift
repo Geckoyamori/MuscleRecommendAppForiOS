@@ -256,7 +256,7 @@ extension TrainingRecordViewController: UITableViewDelegate, UITableViewDataSour
         let header: TrainingRecordTableViewHeaderView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "TrainingRecordTableViewHeaderView") as! TrainingRecordTableViewHeaderView
         // delegateの処理の代理人をselfに指定
         header.trainingRecordTableViewHeaderViewDelegate = self
-        header.setUp(sectionName: self.section[section])
+        header.setUp(sectionNumber: section, sectionName: self.section[section])
         return header
     }
     // sectionの高さを設定
@@ -264,21 +264,36 @@ extension TrainingRecordViewController: UITableViewDelegate, UITableViewDataSour
         return 44
     }
     // セットを1行追加
-    func addSet() {
-        if trainingRecordId == nil {
-            
-            if recommendFlag! {
-                // 推奨新規登録の場合
-                recommendedSet! += 1
-            
+    func addSet(sectionNumber: Int) {
+        switch sectionNumber {
+        // Warm Upの場合
+        case 0:
+            if trainingRecordId == nil {
+                // 推奨新規登録or完全新規登録の場合
+                warmUpNewRegistrationNumberOfSet += 1
+    
             } else {
-                // 完全新規登録の場合
-                mainNewRegistrationNumberOfSet += 1
+                // 編集登録の場合
+                warmUpEditRegistrationNumberOfSet += 1
             }
-            
-        } else {
-            // 編集登録の場合
-//            mainEditRegistrationNumberOfSet += 1
+        // Mainの場合
+        case 1:
+            if trainingRecordId == nil {
+                // 推奨新規登録の場合、推奨セット数を返す
+                if recommendFlag! {
+                    recommendedSet! += 1
+                    
+                // 完全新規登録の場合
+                } else {
+                    mainNewRegistrationNumberOfSet += 1
+                }
+                
+            } else {
+                // 編集登録の場合
+                mainEditRegistrationNumberOfSet += 1
+            }
+        default:
+            break
         }
         
         recordTableView.reloadData()

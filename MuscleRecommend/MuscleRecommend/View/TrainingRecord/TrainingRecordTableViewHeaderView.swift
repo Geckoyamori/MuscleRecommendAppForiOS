@@ -9,7 +9,7 @@ import UIKit
 
 protocol TrainingRecordTableViewHeaderViewDelegate: class {
     // セットを追加する処理
-    func addSet()
+    func addSet(sectionNumber: Int)
 }
 
 class TrainingRecordTableViewHeaderView: UITableViewHeaderFooterView {
@@ -24,11 +24,12 @@ class TrainingRecordTableViewHeaderView: UITableViewHeaderFooterView {
     // セット追加ボタン押下時の処理
     @IBAction func tapAddSetButton(_ sender: Any) {
         // セットを追加する
-        trainingRecordTableViewHeaderViewDelegate?.addSet()
+        trainingRecordTableViewHeaderViewDelegate?.addSet(sectionNumber: (sender as AnyObject).tag)
     }
     
     // ヘッダーのデザインをセットアップ
-    func setUp(sectionName: String) {
+    func setUp(sectionNumber: Int, sectionName: String) {
+        addSetButton.tag = sectionNumber
         sectionLabel.text = sectionName
     }
 }
