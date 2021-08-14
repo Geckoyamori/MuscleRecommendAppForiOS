@@ -16,7 +16,6 @@
 		6B44008C264816E700645E3A /* TrainingLoadModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B44008B264816E700645E3A /* TrainingLoadModel.swift */; };
 		6B440091265A86CD00645E3A /* TrainingRecordTableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B440090265A86CD00645E3A /* TrainingRecordTableViewHeaderView.swift */; };
 		6B440096265A870F00645E3A /* TrainingRecordTableViewHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B440095265A870F00645E3A /* TrainingRecordTableViewHeaderView.xib */; };
-		6B68B6D22635B01B000D7ACC /* TrainingMenuData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B68B6D12635B01B000D7ACC /* TrainingMenuData.swift */; };
 		6B68B6E2264272DE000D7ACC /* TrainingStrengthRecommendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B68B6E1264272DE000D7ACC /* TrainingStrengthRecommendView.swift */; };
 		6B68B6E726427304000D7ACC /* TrainingStrengthRecommendView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B68B6E626427304000D7ACC /* TrainingStrengthRecommendView.xib */; };
 		6B68B6F326429715000D7ACC /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B68B6F226429715000D7ACC /* UIColor.swift */; };
@@ -25,8 +24,6 @@
 		6B68B71726442E7A000D7ACC /* TrainingRecord.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B68B71626442E7A000D7ACC /* TrainingRecord.storyboard */; };
 		6B68B73D264564C1000D7ACC /* TrainingRecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B68B73B264564C1000D7ACC /* TrainingRecordTableViewCell.swift */; };
 		6B68B73E264564C1000D7ACC /* TrainingRecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B68B73C264564C1000D7ACC /* TrainingRecordTableViewCell.xib */; };
-		6B68B749264619A3000D7ACC /* TrainingLoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B68B748264619A3000D7ACC /* TrainingLoadData.swift */; };
-		6B68B74E26462489000D7ACC /* TrainingRecordData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B68B74D26462489000D7ACC /* TrainingRecordData.swift */; };
 		6BEC8BA225AB1F7D00A5C413 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEC8BA125AB1F7D00A5C413 /* AppDelegate.swift */; };
 		6BEC8BA425AB1F7D00A5C413 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEC8BA325AB1F7D00A5C413 /* SceneDelegate.swift */; };
 		6BEC8BA625AB1F7D00A5C413 /* TrainingMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEC8BA525AB1F7D00A5C413 /* TrainingMenuViewController.swift */; };
@@ -71,7 +68,6 @@
 		6B44008B264816E700645E3A /* TrainingLoadModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingLoadModel.swift; sourceTree = "<group>"; };
 		6B440090265A86CD00645E3A /* TrainingRecordTableViewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingRecordTableViewHeaderView.swift; sourceTree = "<group>"; };
 		6B440095265A870F00645E3A /* TrainingRecordTableViewHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainingRecordTableViewHeaderView.xib; sourceTree = "<group>"; };
-		6B68B6D12635B01B000D7ACC /* TrainingMenuData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingMenuData.swift; sourceTree = "<group>"; };
 		6B68B6E1264272DE000D7ACC /* TrainingStrengthRecommendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingStrengthRecommendView.swift; sourceTree = "<group>"; };
 		6B68B6E626427304000D7ACC /* TrainingStrengthRecommendView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainingStrengthRecommendView.xib; sourceTree = "<group>"; };
 		6B68B6F226429715000D7ACC /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
@@ -80,8 +76,6 @@
 		6B68B71626442E7A000D7ACC /* TrainingRecord.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TrainingRecord.storyboard; sourceTree = "<group>"; };
 		6B68B73B264564C1000D7ACC /* TrainingRecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingRecordTableViewCell.swift; sourceTree = "<group>"; };
 		6B68B73C264564C1000D7ACC /* TrainingRecordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainingRecordTableViewCell.xib; sourceTree = "<group>"; };
-		6B68B748264619A3000D7ACC /* TrainingLoadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingLoadData.swift; sourceTree = "<group>"; };
-		6B68B74D26462489000D7ACC /* TrainingRecordData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingRecordData.swift; sourceTree = "<group>"; };
 		6BEC8B9E25AB1F7D00A5C413 /* MuscleRecommend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuscleRecommend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BEC8BA125AB1F7D00A5C413 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6BEC8BA325AB1F7D00A5C413 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -167,6 +161,7 @@
 		6B23382C26480DD700213C5A /* TrainingRecord */ = {
 			isa = PBXGroup;
 			children = (
+				6B68B70E26442E66000D7ACC /* TrainingRecordViewController.swift */,
 				6B68B71626442E7A000D7ACC /* TrainingRecord.storyboard */,
 				6B68B73B264564C1000D7ACC /* TrainingRecordTableViewCell.swift */,
 				6B68B73C264564C1000D7ACC /* TrainingRecordTableViewCell.xib */,
@@ -179,6 +174,7 @@
 		6B23382D26480DEB00213C5A /* TrainingRecordHistory */ = {
 			isa = PBXGroup;
 			children = (
+				6B3DB687262C6CBD0045341E /* TrainingRecordHistoryViewController.swift */,
 				6B3DB68F262C6CC80045341E /* TrainingRecordHistory.storyboard */,
 				6B68B6E1264272DE000D7ACC /* TrainingStrengthRecommendView.swift */,
 				6B68B6E626427304000D7ACC /* TrainingStrengthRecommendView.xib */,
@@ -191,6 +187,7 @@
 		6B23382E26480E0A00213C5A /* TrainingMenu */ = {
 			isa = PBXGroup;
 			children = (
+				6BEC8BA525AB1F7D00A5C413 /* TrainingMenuViewController.swift */,
 				6BEC8BA725AB1F7D00A5C413 /* TrainingMenu.storyboard */,
 			);
 			path = TrainingMenu;
@@ -209,7 +206,6 @@
 		6B23383326480EBA00213C5A /* TrainingMenu */ = {
 			isa = PBXGroup;
 			children = (
-				6B68B6D12635B01B000D7ACC /* TrainingMenuData.swift */,
 				6B44008126480FFF00645E3A /* TrainingMenuModel.swift */,
 			);
 			path = TrainingMenu;
@@ -218,7 +214,6 @@
 		6B23383426480F0F00213C5A /* TrainingLoad */ = {
 			isa = PBXGroup;
 			children = (
-				6B68B748264619A3000D7ACC /* TrainingLoadData.swift */,
 				6B44008B264816E700645E3A /* TrainingLoadModel.swift */,
 			);
 			path = TrainingLoad;
@@ -227,7 +222,6 @@
 		6B23383526480F1800213C5A /* TrainingRecord */ = {
 			isa = PBXGroup;
 			children = (
-				6B68B74D26462489000D7ACC /* TrainingRecordData.swift */,
 				6B4400862648126500645E3A /* TrainingRecordModel.swift */,
 			);
 			path = TrainingRecord;
@@ -236,7 +230,6 @@
 		6B3DB686262C6C860045341E /* TrainingRecordHistory */ = {
 			isa = PBXGroup;
 			children = (
-				6B3DB687262C6CBD0045341E /* TrainingRecordHistoryViewController.swift */,
 			);
 			path = TrainingRecordHistory;
 			sourceTree = "<group>";
@@ -253,25 +246,23 @@
 		6B68B70D26442E35000D7ACC /* TrainingRecord */ = {
 			isa = PBXGroup;
 			children = (
-				6B68B70E26442E66000D7ACC /* TrainingRecordViewController.swift */,
 			);
 			path = TrainingRecord;
 			sourceTree = "<group>";
 		};
-		6BC067DB2622C162005A1829 /* Controller */ = {
+		6BC067DB2622C162005A1829 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				6B68B70D26442E35000D7ACC /* TrainingRecord */,
 				6B3DB686262C6C860045341E /* TrainingRecordHistory */,
 				6BC067DC2622C17A005A1829 /* TrainingMenu */,
 			);
-			path = Controller;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		6BC067DC2622C17A005A1829 /* TrainingMenu */ = {
 			isa = PBXGroup;
 			children = (
-				6BEC8BA525AB1F7D00A5C413 /* TrainingMenuViewController.swift */,
 			);
 			path = TrainingMenu;
 			sourceTree = "<group>";
@@ -304,7 +295,7 @@
 				6B68B6F1264296C0000D7ACC /* Common */,
 				6B23383226480E4600213C5A /* Model */,
 				6B23382B26480D9D00213C5A /* View */,
-				6BC067DB2622C162005A1829 /* Controller */,
+				6BC067DB2622C162005A1829 /* ViewModel */,
 				6BEC8BA125AB1F7D00A5C413 /* AppDelegate.swift */,
 				6BEC8BA325AB1F7D00A5C413 /* SceneDelegate.swift */,
 				6BEC8BAA25AB1F7E00A5C413 /* Assets.xcassets */,
@@ -577,19 +568,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B4400872648126500645E3A /* TrainingRecordModel.swift in Sources */,
-				6B68B74E26462489000D7ACC /* TrainingRecordData.swift in Sources */,
 				6BEC8BA625AB1F7D00A5C413 /* TrainingMenuViewController.swift in Sources */,
 				6B1B205126466F8600885CFA /* TrainingRecordHistoryTableViewCell.swift in Sources */,
 				6B68B6F326429715000D7ACC /* UIColor.swift in Sources */,
 				6B68B73D264564C1000D7ACC /* TrainingRecordTableViewCell.swift in Sources */,
-				6B68B6D22635B01B000D7ACC /* TrainingMenuData.swift in Sources */,
 				6B44008226480FFF00645E3A /* TrainingMenuModel.swift in Sources */,
 				6BEC8BA225AB1F7D00A5C413 /* AppDelegate.swift in Sources */,
 				6B3DB688262C6CBD0045341E /* TrainingRecordHistoryViewController.swift in Sources */,
 				6B68B70F26442E66000D7ACC /* TrainingRecordViewController.swift in Sources */,
 				6B68B6E2264272DE000D7ACC /* TrainingStrengthRecommendView.swift in Sources */,
 				6B440091265A86CD00645E3A /* TrainingRecordTableViewHeaderView.swift in Sources */,
-				6B68B749264619A3000D7ACC /* TrainingLoadData.swift in Sources */,
 				6B68B7002642F4CE000D7ACC /* Date.swift in Sources */,
 				6BEC8BA425AB1F7D00A5C413 /* SceneDelegate.swift in Sources */,
 				6B44008C264816E700645E3A /* TrainingLoadModel.swift in Sources */,

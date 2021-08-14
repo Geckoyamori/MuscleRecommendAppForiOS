@@ -59,10 +59,10 @@ class TrainingRecordViewController: UIViewController {
     
     // D-003のパラメータ
     // 筋トレ負荷量のDBの一覧取得結果
-    var warmUpTrainingLoadList: Results<TrainingLoadData>?
-    var mainTrainingLoadList: Results<TrainingLoadData>?
+    var warmUpTrainingLoadList: Results<TrainingLoadModel>?
+    var mainTrainingLoadList: Results<TrainingLoadModel>?
     // 筋トレ記録のDB取得結果
-    var targetTrainingRecord: Results<TrainingRecordData>?
+    var targetTrainingRecord: Results<TrainingRecordModel>?
     // tableViewに記録された負荷量を格納するディクショナリー
     var warmUpTrainingLoadRecordDic = [String: TrainingLoadRecord]()
     var mainTrainingLoadRecordDic = [String: TrainingLoadRecord]()
@@ -135,10 +135,10 @@ class TrainingRecordViewController: UIViewController {
                     // 筋トレ記録idの発行
                     trainingRecordId = NSUUID().uuidString
                     // 入力した筋トレ負荷量データを筋トレ負荷量テーブルに追加して、総負荷量も算出
-                    totalWarmUpTrainingLoad = trainingLoadModel.insertTrainingLoadData(trainingRecordId: trainingRecordId!, trainingLoadRecordDic: warmUpTrainingLoadRecordDic)
-                    totalMainTrainingLoad = trainingLoadModel.insertTrainingLoadData(trainingRecordId: trainingRecordId!, trainingLoadRecordDic: mainTrainingLoadRecordDic)
+                    totalWarmUpTrainingLoad = trainingLoadModel.insertTrainingLoadModel(trainingRecordId: trainingRecordId!, trainingLoadRecordDic: warmUpTrainingLoadRecordDic)
+                    totalMainTrainingLoad = trainingLoadModel.insertTrainingLoadModel(trainingRecordId: trainingRecordId!, trainingLoadRecordDic: mainTrainingLoadRecordDic)
                     // 筋トレ記録テーブルにinsert
-                    let trainingRecordData = TrainingRecordData()
+                    let trainingRecordData = TrainingRecordModel()
                     trainingRecordData.trainingRecordId = trainingRecordId!
                     trainingRecordData.trainingMenuId = trainingMenuId!
                     trainingRecordData.trainingStrength = trainingStrength!
@@ -148,13 +148,13 @@ class TrainingRecordViewController: UIViewController {
                     trainingRecordData.recommendedWeight = recommendedWeight ?? 0
                     trainingRecordData.recommendedRep = recommendedRep ?? 0
                     trainingRecordData.recommendFlag = recommendFlag!
-                    trainingLoadModel.insertTrainingRecordData(trainingRecordData: trainingRecordData)
+                    trainingLoadModel.insertTrainingRecordData(trainingRecordModel: trainingRecordData)
                     
                 // 編集登録の場合
                 } else {
                     // 入力した筋トレ負荷量データを更新して、総負荷量も算出
-                    totalWarmUpTrainingLoad = trainingLoadModel.updateTrainingLoadData(trainingLoadRecordDic: warmUpTrainingLoadRecordDic)
-                    totalMainTrainingLoad = trainingLoadModel.updateTrainingLoadData(trainingLoadRecordDic: mainTrainingLoadRecordDic)
+                    totalWarmUpTrainingLoad = trainingLoadModel.updateTrainingLoadModel(trainingLoadRecordDic: warmUpTrainingLoadRecordDic)
+                    totalMainTrainingLoad = trainingLoadModel.updateTrainingLoadModel(trainingLoadRecordDic: mainTrainingLoadRecordDic)
                     // 筋トレ記録をupdate
                     trainingLoadModel.updateTrainingRecordData(trainingRecordId: trainingRecordId!, totalWarmUpTrainingLoad: totalWarmUpTrainingLoad, totalMainTrainingLoad: totalMainTrainingLoad)
                 }
