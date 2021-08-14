@@ -3,18 +3,41 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B1B205126466F8600885CFA /* TrainingRecordHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1B204F26466F8600885CFA /* TrainingRecordHistoryTableViewCell.swift */; };
+		6B1B205226466F8600885CFA /* TrainingRecordHistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B1B205026466F8600885CFA /* TrainingRecordHistoryTableViewCell.xib */; };
+		6B3DB688262C6CBD0045341E /* TrainingRecordHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3DB687262C6CBD0045341E /* TrainingRecordHistoryViewController.swift */; };
+		6B3DB690262C6CC80045341E /* TrainingRecordHistory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B3DB68F262C6CC80045341E /* TrainingRecordHistory.storyboard */; };
+		6B44008226480FFF00645E3A /* TrainingMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B44008126480FFF00645E3A /* TrainingMenuModel.swift */; };
+		6B4400872648126500645E3A /* TrainingRecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4400862648126500645E3A /* TrainingRecordModel.swift */; };
+		6B44008C264816E700645E3A /* TrainingLoadModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B44008B264816E700645E3A /* TrainingLoadModel.swift */; };
+		6B440091265A86CD00645E3A /* TrainingRecordTableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B440090265A86CD00645E3A /* TrainingRecordTableViewHeaderView.swift */; };
+		6B440096265A870F00645E3A /* TrainingRecordTableViewHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B440095265A870F00645E3A /* TrainingRecordTableViewHeaderView.xib */; };
+		6B68B6D22635B01B000D7ACC /* TrainingMenuData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B68B6D12635B01B000D7ACC /* TrainingMenuData.swift */; };
+		6B68B6E2264272DE000D7ACC /* TrainingStrengthRecommendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B68B6E1264272DE000D7ACC /* TrainingStrengthRecommendView.swift */; };
+		6B68B6E726427304000D7ACC /* TrainingStrengthRecommendView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B68B6E626427304000D7ACC /* TrainingStrengthRecommendView.xib */; };
+		6B68B6F326429715000D7ACC /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B68B6F226429715000D7ACC /* UIColor.swift */; };
+		6B68B7002642F4CE000D7ACC /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B68B6FF2642F4CE000D7ACC /* Date.swift */; };
+		6B68B70F26442E66000D7ACC /* TrainingRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B68B70E26442E66000D7ACC /* TrainingRecordViewController.swift */; };
+		6B68B71726442E7A000D7ACC /* TrainingRecord.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B68B71626442E7A000D7ACC /* TrainingRecord.storyboard */; };
+		6B68B73D264564C1000D7ACC /* TrainingRecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B68B73B264564C1000D7ACC /* TrainingRecordTableViewCell.swift */; };
+		6B68B73E264564C1000D7ACC /* TrainingRecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B68B73C264564C1000D7ACC /* TrainingRecordTableViewCell.xib */; };
+		6B68B749264619A3000D7ACC /* TrainingLoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B68B748264619A3000D7ACC /* TrainingLoadData.swift */; };
+		6B68B74E26462489000D7ACC /* TrainingRecordData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B68B74D26462489000D7ACC /* TrainingRecordData.swift */; };
 		6BEC8BA225AB1F7D00A5C413 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEC8BA125AB1F7D00A5C413 /* AppDelegate.swift */; };
 		6BEC8BA425AB1F7D00A5C413 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEC8BA325AB1F7D00A5C413 /* SceneDelegate.swift */; };
-		6BEC8BA625AB1F7D00A5C413 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEC8BA525AB1F7D00A5C413 /* ViewController.swift */; };
-		6BEC8BA925AB1F7D00A5C413 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BEC8BA725AB1F7D00A5C413 /* Main.storyboard */; };
+		6BEC8BA625AB1F7D00A5C413 /* TrainingMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEC8BA525AB1F7D00A5C413 /* TrainingMenuViewController.swift */; };
+		6BEC8BA925AB1F7D00A5C413 /* TrainingMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BEC8BA725AB1F7D00A5C413 /* TrainingMenu.storyboard */; };
 		6BEC8BAB25AB1F7E00A5C413 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BEC8BAA25AB1F7E00A5C413 /* Assets.xcassets */; };
 		6BEC8BAE25AB1F7E00A5C413 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BEC8BAC25AB1F7E00A5C413 /* LaunchScreen.storyboard */; };
 		6BEC8BB925AB1F7E00A5C413 /* MuscleRecommendTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEC8BB825AB1F7E00A5C413 /* MuscleRecommendTests.swift */; };
 		6BEC8BC425AB1F7E00A5C413 /* MuscleRecommendUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEC8BC325AB1F7E00A5C413 /* MuscleRecommendUITests.swift */; };
+		72E8304CD30885E97A590C61 /* Pods_MuscleRecommendTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 572C7168F94E77896E4C2CA8 /* Pods_MuscleRecommendTests.framework */; };
+		7DF7C59F87000C85F686A060 /* Pods_MuscleRecommend_MuscleRecommendUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E65E726A59EC4A67AC044A42 /* Pods_MuscleRecommend_MuscleRecommendUITests.framework */; };
+		BEDF244816EE4A3F636401EA /* Pods_MuscleRecommend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F578AF6EEBE4834C4447B701 /* Pods_MuscleRecommend.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,11 +58,35 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3324D553A12E8ED746DD7427 /* Pods-MuscleRecommendTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuscleRecommendTests.debug.xcconfig"; path = "Target Support Files/Pods-MuscleRecommendTests/Pods-MuscleRecommendTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4946AE49AE1301AA186A5750 /* Pods-MuscleRecommendTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuscleRecommendTests.release.xcconfig"; path = "Target Support Files/Pods-MuscleRecommendTests/Pods-MuscleRecommendTests.release.xcconfig"; sourceTree = "<group>"; };
+		572C7168F94E77896E4C2CA8 /* Pods_MuscleRecommendTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MuscleRecommendTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A34EC7BCA62911B142E95DC /* Pods-MuscleRecommend-MuscleRecommendUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuscleRecommend-MuscleRecommendUITests.release.xcconfig"; path = "Target Support Files/Pods-MuscleRecommend-MuscleRecommendUITests/Pods-MuscleRecommend-MuscleRecommendUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6B1B204F26466F8600885CFA /* TrainingRecordHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingRecordHistoryTableViewCell.swift; sourceTree = "<group>"; };
+		6B1B205026466F8600885CFA /* TrainingRecordHistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainingRecordHistoryTableViewCell.xib; sourceTree = "<group>"; };
+		6B3DB687262C6CBD0045341E /* TrainingRecordHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingRecordHistoryViewController.swift; sourceTree = "<group>"; };
+		6B3DB68F262C6CC80045341E /* TrainingRecordHistory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TrainingRecordHistory.storyboard; sourceTree = "<group>"; };
+		6B44008126480FFF00645E3A /* TrainingMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingMenuModel.swift; sourceTree = "<group>"; };
+		6B4400862648126500645E3A /* TrainingRecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingRecordModel.swift; sourceTree = "<group>"; };
+		6B44008B264816E700645E3A /* TrainingLoadModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingLoadModel.swift; sourceTree = "<group>"; };
+		6B440090265A86CD00645E3A /* TrainingRecordTableViewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingRecordTableViewHeaderView.swift; sourceTree = "<group>"; };
+		6B440095265A870F00645E3A /* TrainingRecordTableViewHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainingRecordTableViewHeaderView.xib; sourceTree = "<group>"; };
+		6B68B6D12635B01B000D7ACC /* TrainingMenuData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingMenuData.swift; sourceTree = "<group>"; };
+		6B68B6E1264272DE000D7ACC /* TrainingStrengthRecommendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingStrengthRecommendView.swift; sourceTree = "<group>"; };
+		6B68B6E626427304000D7ACC /* TrainingStrengthRecommendView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainingStrengthRecommendView.xib; sourceTree = "<group>"; };
+		6B68B6F226429715000D7ACC /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		6B68B6FF2642F4CE000D7ACC /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		6B68B70E26442E66000D7ACC /* TrainingRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingRecordViewController.swift; sourceTree = "<group>"; };
+		6B68B71626442E7A000D7ACC /* TrainingRecord.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TrainingRecord.storyboard; sourceTree = "<group>"; };
+		6B68B73B264564C1000D7ACC /* TrainingRecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingRecordTableViewCell.swift; sourceTree = "<group>"; };
+		6B68B73C264564C1000D7ACC /* TrainingRecordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainingRecordTableViewCell.xib; sourceTree = "<group>"; };
+		6B68B748264619A3000D7ACC /* TrainingLoadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingLoadData.swift; sourceTree = "<group>"; };
+		6B68B74D26462489000D7ACC /* TrainingRecordData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingRecordData.swift; sourceTree = "<group>"; };
 		6BEC8B9E25AB1F7D00A5C413 /* MuscleRecommend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuscleRecommend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BEC8BA125AB1F7D00A5C413 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6BEC8BA325AB1F7D00A5C413 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6BEC8BA525AB1F7D00A5C413 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6BEC8BA825AB1F7D00A5C413 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6BEC8BA525AB1F7D00A5C413 /* TrainingMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingMenuViewController.swift; sourceTree = "<group>"; };
+		6BEC8BA825AB1F7D00A5C413 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TrainingMenu.storyboard; sourceTree = "<group>"; };
 		6BEC8BAA25AB1F7E00A5C413 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6BEC8BAD25AB1F7E00A5C413 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6BEC8BAF25AB1F7E00A5C413 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +96,11 @@
 		6BEC8BBF25AB1F7E00A5C413 /* MuscleRecommendUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MuscleRecommendUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BEC8BC325AB1F7E00A5C413 /* MuscleRecommendUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleRecommendUITests.swift; sourceTree = "<group>"; };
 		6BEC8BC525AB1F7E00A5C413 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B96C7861118630908F9E47A /* Pods-MuscleRecommend.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuscleRecommend.release.xcconfig"; path = "Target Support Files/Pods-MuscleRecommend/Pods-MuscleRecommend.release.xcconfig"; sourceTree = "<group>"; };
+		E57FD38A655FB366A677EED0 /* Pods-MuscleRecommend.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuscleRecommend.debug.xcconfig"; path = "Target Support Files/Pods-MuscleRecommend/Pods-MuscleRecommend.debug.xcconfig"; sourceTree = "<group>"; };
+		E65E726A59EC4A67AC044A42 /* Pods_MuscleRecommend_MuscleRecommendUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MuscleRecommend_MuscleRecommendUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFDBF85F8D783E99EC450C7D /* Pods-MuscleRecommend-MuscleRecommendUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuscleRecommend-MuscleRecommendUITests.debug.xcconfig"; path = "Target Support Files/Pods-MuscleRecommend-MuscleRecommendUITests/Pods-MuscleRecommend-MuscleRecommendUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F578AF6EEBE4834C4447B701 /* Pods_MuscleRecommend.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MuscleRecommend.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEDF244816EE4A3F636401EA /* Pods_MuscleRecommend.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72E8304CD30885E97A590C61 /* Pods_MuscleRecommendTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +124,158 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DF7C59F87000C85F686A060 /* Pods_MuscleRecommend_MuscleRecommendUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		51429D6C70DAEE1F1DA3D742 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F578AF6EEBE4834C4447B701 /* Pods_MuscleRecommend.framework */,
+				E65E726A59EC4A67AC044A42 /* Pods_MuscleRecommend_MuscleRecommendUITests.framework */,
+				572C7168F94E77896E4C2CA8 /* Pods_MuscleRecommendTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		661310C26D0BDA01B0EE4734 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E57FD38A655FB366A677EED0 /* Pods-MuscleRecommend.debug.xcconfig */,
+				9B96C7861118630908F9E47A /* Pods-MuscleRecommend.release.xcconfig */,
+				EFDBF85F8D783E99EC450C7D /* Pods-MuscleRecommend-MuscleRecommendUITests.debug.xcconfig */,
+				5A34EC7BCA62911B142E95DC /* Pods-MuscleRecommend-MuscleRecommendUITests.release.xcconfig */,
+				3324D553A12E8ED746DD7427 /* Pods-MuscleRecommendTests.debug.xcconfig */,
+				4946AE49AE1301AA186A5750 /* Pods-MuscleRecommendTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6B23382B26480D9D00213C5A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6B23382E26480E0A00213C5A /* TrainingMenu */,
+				6B23382D26480DEB00213C5A /* TrainingRecordHistory */,
+				6B23382C26480DD700213C5A /* TrainingRecord */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6B23382C26480DD700213C5A /* TrainingRecord */ = {
+			isa = PBXGroup;
+			children = (
+				6B68B71626442E7A000D7ACC /* TrainingRecord.storyboard */,
+				6B68B73B264564C1000D7ACC /* TrainingRecordTableViewCell.swift */,
+				6B68B73C264564C1000D7ACC /* TrainingRecordTableViewCell.xib */,
+				6B440090265A86CD00645E3A /* TrainingRecordTableViewHeaderView.swift */,
+				6B440095265A870F00645E3A /* TrainingRecordTableViewHeaderView.xib */,
+			);
+			path = TrainingRecord;
+			sourceTree = "<group>";
+		};
+		6B23382D26480DEB00213C5A /* TrainingRecordHistory */ = {
+			isa = PBXGroup;
+			children = (
+				6B3DB68F262C6CC80045341E /* TrainingRecordHistory.storyboard */,
+				6B68B6E1264272DE000D7ACC /* TrainingStrengthRecommendView.swift */,
+				6B68B6E626427304000D7ACC /* TrainingStrengthRecommendView.xib */,
+				6B1B204F26466F8600885CFA /* TrainingRecordHistoryTableViewCell.swift */,
+				6B1B205026466F8600885CFA /* TrainingRecordHistoryTableViewCell.xib */,
+			);
+			path = TrainingRecordHistory;
+			sourceTree = "<group>";
+		};
+		6B23382E26480E0A00213C5A /* TrainingMenu */ = {
+			isa = PBXGroup;
+			children = (
+				6BEC8BA725AB1F7D00A5C413 /* TrainingMenu.storyboard */,
+			);
+			path = TrainingMenu;
+			sourceTree = "<group>";
+		};
+		6B23383226480E4600213C5A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6B23383526480F1800213C5A /* TrainingRecord */,
+				6B23383426480F0F00213C5A /* TrainingLoad */,
+				6B23383326480EBA00213C5A /* TrainingMenu */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6B23383326480EBA00213C5A /* TrainingMenu */ = {
+			isa = PBXGroup;
+			children = (
+				6B68B6D12635B01B000D7ACC /* TrainingMenuData.swift */,
+				6B44008126480FFF00645E3A /* TrainingMenuModel.swift */,
+			);
+			path = TrainingMenu;
+			sourceTree = "<group>";
+		};
+		6B23383426480F0F00213C5A /* TrainingLoad */ = {
+			isa = PBXGroup;
+			children = (
+				6B68B748264619A3000D7ACC /* TrainingLoadData.swift */,
+				6B44008B264816E700645E3A /* TrainingLoadModel.swift */,
+			);
+			path = TrainingLoad;
+			sourceTree = "<group>";
+		};
+		6B23383526480F1800213C5A /* TrainingRecord */ = {
+			isa = PBXGroup;
+			children = (
+				6B68B74D26462489000D7ACC /* TrainingRecordData.swift */,
+				6B4400862648126500645E3A /* TrainingRecordModel.swift */,
+			);
+			path = TrainingRecord;
+			sourceTree = "<group>";
+		};
+		6B3DB686262C6C860045341E /* TrainingRecordHistory */ = {
+			isa = PBXGroup;
+			children = (
+				6B3DB687262C6CBD0045341E /* TrainingRecordHistoryViewController.swift */,
+			);
+			path = TrainingRecordHistory;
+			sourceTree = "<group>";
+		};
+		6B68B6F1264296C0000D7ACC /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				6B68B6F226429715000D7ACC /* UIColor.swift */,
+				6B68B6FF2642F4CE000D7ACC /* Date.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		6B68B70D26442E35000D7ACC /* TrainingRecord */ = {
+			isa = PBXGroup;
+			children = (
+				6B68B70E26442E66000D7ACC /* TrainingRecordViewController.swift */,
+			);
+			path = TrainingRecord;
+			sourceTree = "<group>";
+		};
+		6BC067DB2622C162005A1829 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6B68B70D26442E35000D7ACC /* TrainingRecord */,
+				6B3DB686262C6C860045341E /* TrainingRecordHistory */,
+				6BC067DC2622C17A005A1829 /* TrainingMenu */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6BC067DC2622C17A005A1829 /* TrainingMenu */ = {
+			isa = PBXGroup;
+			children = (
+				6BEC8BA525AB1F7D00A5C413 /* TrainingMenuViewController.swift */,
+			);
+			path = TrainingMenu;
+			sourceTree = "<group>";
+		};
 		6BEC8B9525AB1F7D00A5C413 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +283,8 @@
 				6BEC8BB725AB1F7E00A5C413 /* MuscleRecommendTests */,
 				6BEC8BC225AB1F7E00A5C413 /* MuscleRecommendUITests */,
 				6BEC8B9F25AB1F7D00A5C413 /* Products */,
+				661310C26D0BDA01B0EE4734 /* Pods */,
+				51429D6C70DAEE1F1DA3D742 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,10 +301,12 @@
 		6BEC8BA025AB1F7D00A5C413 /* MuscleRecommend */ = {
 			isa = PBXGroup;
 			children = (
+				6B68B6F1264296C0000D7ACC /* Common */,
+				6B23383226480E4600213C5A /* Model */,
+				6B23382B26480D9D00213C5A /* View */,
+				6BC067DB2622C162005A1829 /* Controller */,
 				6BEC8BA125AB1F7D00A5C413 /* AppDelegate.swift */,
 				6BEC8BA325AB1F7D00A5C413 /* SceneDelegate.swift */,
-				6BEC8BA525AB1F7D00A5C413 /* ViewController.swift */,
-				6BEC8BA725AB1F7D00A5C413 /* Main.storyboard */,
 				6BEC8BAA25AB1F7E00A5C413 /* Assets.xcassets */,
 				6BEC8BAC25AB1F7E00A5C413 /* LaunchScreen.storyboard */,
 				6BEC8BAF25AB1F7E00A5C413 /* Info.plist */,
@@ -135,9 +339,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6BEC8BC825AB1F7E00A5C413 /* Build configuration list for PBXNativeTarget "MuscleRecommend" */;
 			buildPhases = (
+				349C6F19D76A518A2FF59E7C /* [CP] Check Pods Manifest.lock */,
 				6BEC8B9A25AB1F7D00A5C413 /* Sources */,
 				6BEC8B9B25AB1F7D00A5C413 /* Frameworks */,
 				6BEC8B9C25AB1F7D00A5C413 /* Resources */,
+				0F2BE30548F6D04038289CD8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +358,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6BEC8BCB25AB1F7E00A5C413 /* Build configuration list for PBXNativeTarget "MuscleRecommendTests" */;
 			buildPhases = (
+				BC752A2CF2E7D5AD58FAE83B /* [CP] Check Pods Manifest.lock */,
 				6BEC8BB025AB1F7E00A5C413 /* Sources */,
 				6BEC8BB125AB1F7E00A5C413 /* Frameworks */,
 				6BEC8BB225AB1F7E00A5C413 /* Resources */,
@@ -170,9 +377,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6BEC8BCE25AB1F7E00A5C413 /* Build configuration list for PBXNativeTarget "MuscleRecommendUITests" */;
 			buildPhases = (
+				A0D6803F9F2B498DBAF2EFB3 /* [CP] Check Pods Manifest.lock */,
 				6BEC8BBB25AB1F7E00A5C413 /* Sources */,
 				6BEC8BBC25AB1F7E00A5C413 /* Frameworks */,
 				6BEC8BBD25AB1F7E00A5C413 /* Resources */,
+				18305DAA6685309228AD4425 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -231,9 +440,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B68B73E264564C1000D7ACC /* TrainingRecordTableViewCell.xib in Resources */,
 				6BEC8BAE25AB1F7E00A5C413 /* LaunchScreen.storyboard in Resources */,
+				6B68B6E726427304000D7ACC /* TrainingStrengthRecommendView.xib in Resources */,
+				6B68B71726442E7A000D7ACC /* TrainingRecord.storyboard in Resources */,
 				6BEC8BAB25AB1F7E00A5C413 /* Assets.xcassets in Resources */,
-				6BEC8BA925AB1F7D00A5C413 /* Main.storyboard in Resources */,
+				6BEC8BA925AB1F7D00A5C413 /* TrainingMenu.storyboard in Resources */,
+				6B3DB690262C6CC80045341E /* TrainingRecordHistory.storyboard in Resources */,
+				6B440096265A870F00645E3A /* TrainingRecordTableViewHeaderView.xib in Resources */,
+				6B1B205226466F8600885CFA /* TrainingRecordHistoryTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,14 +468,131 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0F2BE30548F6D04038289CD8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MuscleRecommend/Pods-MuscleRecommend-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MuscleRecommend/Pods-MuscleRecommend-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MuscleRecommend/Pods-MuscleRecommend-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		18305DAA6685309228AD4425 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MuscleRecommend-MuscleRecommendUITests/Pods-MuscleRecommend-MuscleRecommendUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MuscleRecommend-MuscleRecommendUITests/Pods-MuscleRecommend-MuscleRecommendUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MuscleRecommend-MuscleRecommendUITests/Pods-MuscleRecommend-MuscleRecommendUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		349C6F19D76A518A2FF59E7C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MuscleRecommend-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A0D6803F9F2B498DBAF2EFB3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MuscleRecommend-MuscleRecommendUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC752A2CF2E7D5AD58FAE83B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MuscleRecommendTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6BEC8B9A25AB1F7D00A5C413 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BEC8BA625AB1F7D00A5C413 /* ViewController.swift in Sources */,
+				6B4400872648126500645E3A /* TrainingRecordModel.swift in Sources */,
+				6B68B74E26462489000D7ACC /* TrainingRecordData.swift in Sources */,
+				6BEC8BA625AB1F7D00A5C413 /* TrainingMenuViewController.swift in Sources */,
+				6B1B205126466F8600885CFA /* TrainingRecordHistoryTableViewCell.swift in Sources */,
+				6B68B6F326429715000D7ACC /* UIColor.swift in Sources */,
+				6B68B73D264564C1000D7ACC /* TrainingRecordTableViewCell.swift in Sources */,
+				6B68B6D22635B01B000D7ACC /* TrainingMenuData.swift in Sources */,
+				6B44008226480FFF00645E3A /* TrainingMenuModel.swift in Sources */,
 				6BEC8BA225AB1F7D00A5C413 /* AppDelegate.swift in Sources */,
+				6B3DB688262C6CBD0045341E /* TrainingRecordHistoryViewController.swift in Sources */,
+				6B68B70F26442E66000D7ACC /* TrainingRecordViewController.swift in Sources */,
+				6B68B6E2264272DE000D7ACC /* TrainingStrengthRecommendView.swift in Sources */,
+				6B440091265A86CD00645E3A /* TrainingRecordTableViewHeaderView.swift in Sources */,
+				6B68B749264619A3000D7ACC /* TrainingLoadData.swift in Sources */,
+				6B68B7002642F4CE000D7ACC /* Date.swift in Sources */,
 				6BEC8BA425AB1F7D00A5C413 /* SceneDelegate.swift in Sources */,
+				6B44008C264816E700645E3A /* TrainingLoadModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,12 +628,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6BEC8BA725AB1F7D00A5C413 /* Main.storyboard */ = {
+		6BEC8BA725AB1F7D00A5C413 /* TrainingMenu.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				6BEC8BA825AB1F7D00A5C413 /* Base */,
 			);
-			name = Main.storyboard;
+			name = TrainingMenu.storyboard;
 			sourceTree = "<group>";
 		};
 		6BEC8BAC25AB1F7E00A5C413 /* LaunchScreen.storyboard */ = {
@@ -433,6 +765,7 @@
 		};
 		6BEC8BC925AB1F7E00A5C413 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E57FD38A655FB366A677EED0 /* Pods-MuscleRecommend.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -452,6 +785,7 @@
 		};
 		6BEC8BCA25AB1F7E00A5C413 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B96C7861118630908F9E47A /* Pods-MuscleRecommend.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -471,6 +805,7 @@
 		};
 		6BEC8BCC25AB1F7E00A5C413 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3324D553A12E8ED746DD7427 /* Pods-MuscleRecommendTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -493,6 +828,7 @@
 		};
 		6BEC8BCD25AB1F7E00A5C413 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4946AE49AE1301AA186A5750 /* Pods-MuscleRecommendTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -515,6 +851,7 @@
 		};
 		6BEC8BCF25AB1F7E00A5C413 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFDBF85F8D783E99EC450C7D /* Pods-MuscleRecommend-MuscleRecommendUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -535,6 +872,7 @@
 		};
 		6BEC8BD025AB1F7E00A5C413 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A34EC7BCA62911B142E95DC /* Pods-MuscleRecommend-MuscleRecommendUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

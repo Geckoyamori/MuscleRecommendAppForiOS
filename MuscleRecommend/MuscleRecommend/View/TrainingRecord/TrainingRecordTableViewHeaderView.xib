@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TrainingRecordTableViewHeaderView" customModule="MuscleRecommend" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="474" height="116"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ThM-G0-A7g">
+                    <rect key="frame" x="0.0" y="0.0" width="474" height="116"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EbI-3J-xLJ">
+                            <rect key="frame" x="0.0" y="0.0" width="20" height="116"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="20" id="hmP-HI-yFb"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ML-g0-OvE" userLabel="Section Label">
+                            <rect key="frame" x="20" y="48" width="41.5" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w7v-0C-CuX">
+                            <rect key="frame" x="362" y="41" width="92" height="34"/>
+                            <state key="normal" title="セット追加">
+                                <color key="titleColor" systemColor="systemBlueColor"/>
+                            </state>
+                            <connections>
+                                <action selector="tapAddSetButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="B5j-Ae-AlH"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JOR-Jx-ily">
+                            <rect key="frame" x="454" y="0.0" width="20" height="116"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="20" id="46Q-MO-YfU"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="6ML-g0-OvE" firstAttribute="leading" secondItem="EbI-3J-xLJ" secondAttribute="trailing" id="NM4-nq-xqr"/>
+                        <constraint firstItem="JOR-Jx-ily" firstAttribute="leading" secondItem="w7v-0C-CuX" secondAttribute="trailing" id="XWj-A8-XLC"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <constraints>
+                <constraint firstItem="ThM-G0-A7g" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="G7q-t6-bPC"/>
+                <constraint firstAttribute="bottom" secondItem="ThM-G0-A7g" secondAttribute="bottom" id="dkL-pp-6pS"/>
+                <constraint firstItem="ThM-G0-A7g" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="kHR-zM-Qsd"/>
+                <constraint firstItem="ThM-G0-A7g" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="uvT-du-Ejg"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="addSetButton" destination="w7v-0C-CuX" id="Q84-yd-Jar"/>
+                <outlet property="sectionLabel" destination="6ML-g0-OvE" id="9nc-G5-oBv"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="85.714285714285708"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
