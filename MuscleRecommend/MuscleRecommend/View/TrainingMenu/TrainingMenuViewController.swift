@@ -25,7 +25,7 @@ class TrainingMenuViewController: UIViewController {
     
     // D-001のパラメータ
     // 筋トレメニューのDBの一覧取得結果
-    var trainingMenuList: Results<TrainingMenuData>?
+    var trainingMenuList: Results<TrainingMenuModel>?
     // 選択された筋トレメニュー
     var selectedTrainingMenu: String?
     // 選択された筋トレメニューid
@@ -70,7 +70,7 @@ class TrainingMenuViewController: UIViewController {
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
         let okAction = UIAlertAction(title: "OK", style: .default) { [self] (_) in
             if let textField = alert.textFields?.first {
-                trainingMenuModel.insertTrainingMenuData(trainingMenuName: textField.text!)
+                trainingMenuModel.insertTrainingMenuModel(trainingMenuName: textField.text!)
             }
             muscleMenuTableView.reloadData()
         }
@@ -106,7 +106,7 @@ extension TrainingMenuViewController: UITableViewDelegate, UITableViewDataSource
     // テーブルビューのセルをスワイプで削除
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCell.EditingStyle.delete {
-            trainingMenuModel.deleteTrainingMenuData(trainingMenuList: trainingMenuList!, index: indexPath.row)
+            trainingMenuModel.deleteTrainingMenuModel(trainingMenuList: trainingMenuList!, index: indexPath.row)
             muscleMenuTableView.deleteRows(at: [indexPath as IndexPath], with: UITableView.RowAnimation.automatic)
         }
     }    

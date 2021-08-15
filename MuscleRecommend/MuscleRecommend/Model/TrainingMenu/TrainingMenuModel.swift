@@ -9,30 +9,50 @@ import UIKit
 import RealmSwift
 
 // 筋トレメニューモデル
-class TrainingMenuModel {
+class TrainingMenuModel: Object {
+    
+    // 筋トレメニューid
+    @objc dynamic var trainingMenuId: String = NSUUID().uuidString
+    // 筋トレメニュー名
+    @objc dynamic var trainingMenuName: String = ""
+    // 筋トレ部位
+    @objc dynamic var trainingPart: String = ""
+    // 作成日時
+    @objc dynamic var createdDate: Date = Date().toJapaneseDeviceDate()
+    // 更新日時
+    @objc dynamic var updatedDate: Date = Date().toJapaneseDeviceDate()
+    
+    // 筋トレメニューidをプライマリーキーに設定
+    override class func primaryKey() -> String? {
+        return "trainingMenuId"
+    }
+    
+}
+
+extension TrainingMenuModel {
     
     // Realm
-    let realm = try! Realm()
+    private static let realm = try! Realm()
     
     // 一覧取得
-    func selectTrainingMenuList() -> Results<TrainingMenuData>? {
-        return realm.objects(TrainingMenuData.self)
+    func selectTrainingMenuList() -> Results<TrainingMenuModel>? {
+        return TrainingMenuModel.realm.objects(TrainingMenuModel.self)
     }
     
     // 筋トレメニューを追加
-    func insertTrainingMenuData(trainingMenuName: String) {
+    func insertTrainingMenuModel(trainingMenuName: String) {
         // 追加する筋トレメニューの設定
-        let trainingMenuData = TrainingMenuData()
-        trainingMenuData.trainingMenuName = trainingMenuName
-        try! realm.write {
-            realm.add(TrainingMenuData(value: trainingMenuData))
+        let trainingMenuModel = TrainingMenuModel()
+        trainingMenuModel.trainingMenuName = trainingMenuName
+        try! TrainingMenuModel.realm.write {
+            TrainingMenuModel.realm.add(TrainingMenuModel(value: trainingMenuModel))
         }
     }
     
     // 選択した筋トレメニューを削除
-    func deleteTrainingMenuData(trainingMenuList: Results<TrainingMenuData>, index: Int) {
-        try! realm.write {
-            realm.delete(trainingMenuList[index])
+    func deleteTrainingMenuModel(trainingMenuList: Results<TrainingMenuModel>, index: Int) {
+        try! TrainingMenuModel.realm.write {
+            TrainingMenuModel.realm.delete(trainingMenuList[index])
         }
     }
 }

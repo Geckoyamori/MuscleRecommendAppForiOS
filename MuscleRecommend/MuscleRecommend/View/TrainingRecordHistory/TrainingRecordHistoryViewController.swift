@@ -46,11 +46,11 @@ class TrainingRecordHistoryViewController: UIViewController {
     // 筋トレ記録id
     var trainingRecordId: String?
     // 筋トレ記録のDBの一覧取得結果
-    var trainingRecordList: Results<TrainingRecordData>?
+    var trainingRecordList: Results<TrainingRecordModel>?
     // 直近の筋トレ記録取得結果
-    var recentHighStrengthTrainingRecord: TrainingRecordData?
-    var recentMediumStrengthTrainingRecord: TrainingRecordData?
-    var recentLowStrengthTrainingRecord: TrainingRecordData?
+    var recentHighStrengthTrainingRecord: TrainingRecordModel?
+    var recentMediumStrengthTrainingRecord: TrainingRecordModel?
+    var recentLowStrengthTrainingRecord: TrainingRecordModel?
     // 選択された筋トレ強度と負荷量
     var trainingStrength: String?
     var recommendedSet: Int?
